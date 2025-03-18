@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  background-color:#F3F3F3;
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: #000000;
+    --primary-text: #FFF0F0;
+    --primary-foreground: 210 40% 98%;
+    --secondary: #F3F3F3;
+    --secondary-text: #164C2B;
+    --third-color: black;
+    --h1: clamp(1.3125rem, 1.1587rem + 0.7692vw, 1.8125rem);
+    --h2: clamp(1.0625rem, 0.9663rem + 0.4808vw, 1.375rem);
+    --p20: clamp(1.0625rem, 1.0048rem + 0.2885vw, 1.25rem);
+    --p35: calc(1.25rem + ((1vw - 0.2rem) * 0.9375));
+    --p18: clamp(1rem, 0.9615rem + 0.1923vw, 1.125rem);
+    --p40: clamp(1.5625rem, 1.2364rem + 1.6304vw, 2.5rem);
+    --footer-font:calc(9.375rem + ((1vw - 19.2px) * 7.8947));
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: var(--secondary);
+}
+
+.product-card-wrappar {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+#progress {
+
+  border-radius: 7px;
+  width: 200px;
+  height: 10px;
+  /* margin-left: -11.5%; */
+  /* box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 ); */
+
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--secondary);
+  border-radius: 7px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--third-color);
+  border-radius: 7px;
+  border-color: transparent
+    /* box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 ); */
+}
+
+#movinganimation {
+  animation-name: movinganimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes movinganimation {
+  0% {
+    transform: translateY(0px)
+  }
+
+  25% {
+    transform: translateY(-10px)
+  }
+
+  75% {
+    transform: translateY(0px)
+  }
+
+
+}
+
+.categories {
+  font-weight: 500;
+  font-size: var(--p18);
+  padding: 0px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
