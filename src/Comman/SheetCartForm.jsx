@@ -52,7 +52,7 @@ function SheetCartForm({ product, setConfirm, setOrderID }) {
             })
 
             const orderids = []
-            const allProductSaved = true;
+            let allProductSaved = true;
 
             orders.forEach(async (order, index) => {
                 const response = await acceptOrderForm(order);
