@@ -43,7 +43,7 @@
     "react-query": "^3.39.3",
     "react-router-dom": "^6.26.1",
     "recharts": "^2.12.7",
-    "rollup": "file:latest",
+    "rollup": "^4.36.0",
     "shadcn": "^2.1.8",
     "sonner": "^1.7.1",
     "swiper": "^11.1.12",
