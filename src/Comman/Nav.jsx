@@ -32,8 +32,11 @@ function Nav(props) {
 
     <nav className='  container px-5 py-2 flex items-center justify-between gap-1 text-third md:px-10 sticky bg-white top-0 z-50  xl:px-20  '>
       <h2 className='text-h1 font-normal  italic text-primary '><Link to={'/'}>Tread & Trend</Link></h2>
+      
       <ul className='hidden items-center gap-3 relative md:gap-5  xl:gap-5 lg:flex '>
+
         <li className="bg-transparent font-normal text-black p-0 text-lg"><Link to={"/products"}>Products</Link></li>
+
         <Megamanu>
           <li className=""><Link to={"/collections"}>Collections</Link></li>
         </Megamanu>

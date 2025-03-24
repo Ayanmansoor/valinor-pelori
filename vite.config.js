@@ -13,4 +13,14 @@ export default defineConfig({
     host: "0.0.0.0", // Allows external devices to access your app
     port: 5173, // Keeps the port the same for easy access
   },
+  build: {
+    outDir: "dist", // Ensure the output directory is 'dist' as Vercel expects
+    rollupOptions: {
+      output: {
+        manualChunks: undefined, // Avoid dynamic imports breaking the build
+      },
+    },
+  },
+
+
 });
