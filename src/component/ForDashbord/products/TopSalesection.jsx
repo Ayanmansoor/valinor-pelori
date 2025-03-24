@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdFilterList } from "react-icons/md";
-import Saleproductcard from './saleproductcard';
+// import Saleproductcard from './saleproductcard';
+import Saleproductcard from './Saleproductcard';
 function TopSalesection() {
  const data=[
     {
