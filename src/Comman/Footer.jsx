@@ -84,7 +84,8 @@ function Footer() {
 
         </div>
       </section>
-      <div className='w-full relative z-0 -bottom-[40px] z- h-auto  hidden  md:flex leading-[1.1] items-center op opacity-30  uppercase font-semibold text-footerfont justify-center -mt-28 bg-gradient-to-r from-transparent  to-white bg-clip-text  '>Valinor & Pelóri
+      <div className='w-full relative z-0 -bottom-[40px] z- h-auto  hidden  md:flex leading-[1.1] items-center op opacity-30  uppercase font-semibold text-footerfont justify-center -mt-28 bg-gradient-to-r from-transparent  to-white bg-clip-text  '>
+        Tread & Trend
       </div>
 
 
