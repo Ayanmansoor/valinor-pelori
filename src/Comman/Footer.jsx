@@ -32,8 +32,8 @@ function Footer() {
               <Link to={'/products'} href="">Proudcts</Link>
               <Link to={'/trending'} href="">Trending</Link>
               <Link to={'/about-us'} href="">About us</Link>
-              <Link to={'/faqs'} href="">Privacy and Policy</Link>
-              <Link to={'/faqs'} href="">Shiping Policy</Link>
+              <Link to={'/privacy-policy'} href="">Privacy and Policy</Link>
+              <Link to={'/shiping-policy'} href="">Shiping Policy</Link>
               <Link to={'/about-us'} href="">FAQ</Link>
 
             </ul>

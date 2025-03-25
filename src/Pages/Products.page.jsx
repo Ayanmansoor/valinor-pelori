@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useQuery } from 'react-query'
+import { isError, useQuery } from 'react-query'
 import { useParams, useLocation } from 'react-router-dom'
 import CarouselProduct from '@/component/ForHome/CarouselProduct'
 // import ProductCard from '@/component/ForHome/ProductCard'
@@ -136,19 +136,32 @@ function Productspage() {
 
             {/* <Discount categoryName={"shoes"} /> */}
             <section className="w-full min-h-[300px] relative grid grid-cols-1 container lg:grid-cols-[1fr_3fr] 2xl:grid-cols-[0.6fr_auto] px-2  md:px-10   xl:px-20 ">
-                <ProductFilter collection={allcollection} />
+                {
+                    isErrorCollections ?
+                        <div className='text-center text-sm font-medium'>
+                            Filter Data not Availble
+                        </div>
+                        :
+                        <span className=' hidden lg:block'>
+                            <ProductFilter collection={allcollection} />
+                        </span>
+
+                }
 
                 <div className="w-full gap-5 pb-10 relative flex flex-col px-0 md:px-10 xl:px-10">
                     <div className="w-full h-auto flex items-center bg-secondary border-b border-gray-300 py-2 justify-between ">
-                        <h1 className="text-lg font-medium text-primary">Total Products ( 300 )</h1>
-                        <span className=' block  md:hidden'>
-                            <MobFilterSheet>
+                        <h1 className="text-lg font-medium text-primary w-full">Total Products ( {allproducts && allproducts.length} )</h1>
+                        <span className=' block  lg:hidden'>
+                            <MobFilterSheet collection={allcollection}>
                                 <IoFilterOutline className='text-[20px] text-foreground cursor-pointer ' />
                             </MobFilterSheet>
                         </span>
-                     
+
                     </div>
+
                     <GridRroduct data={{ categoryName: "", url: "product", products: allproducts }} />
+
+
                 </div>
             </section>
             <Discount categoryName={"shoes"} />

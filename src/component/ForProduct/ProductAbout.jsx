@@ -175,10 +175,10 @@ function ProductAbout({ product }) {
 
                 {/* BENIFITS */}
                 <ul className='w-full relative h-auto flex items-start gap-2 flex-col py-4 '>
-                    <li className='flex items-center w-full relative gap-1'><CiDiscount1 className='text-[20px]' />
+                    <li className='flex items-center w-full relative gap-1 text-xs sm:text-sm'><CiDiscount1 className='text-[20px]' />
                         Save 5% on all Online Payments under Rs 10,000/-
                     </li>
-                    <li className='flex items-start w-full relative gap-1'><CiDeliveryTruck className='text-[30px]' />
+                    <li className='flex items-start w-full relative gap-1 text-xs sm:text-sm'><CiDeliveryTruck className='text-[30px]' />
                         Delivery: Delhi, Gurgaon: 1-2 Days, Metro cities:2-3 days , Others: 3-5 days
                     </li>
                 </ul>

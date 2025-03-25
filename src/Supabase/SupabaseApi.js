@@ -4,7 +4,8 @@ import { useEffect } from "react";
 async function getAllProducts() {
   const { data: products, error } = await mysupabase
     .from("products")
-    .select("*,discounts(*)");
+    .select("*,discounts(*)")
+    .eq('is_new_arrival',false);
   if (products) {
     return products;
   } else {

@@ -173,14 +173,14 @@ function Home() {
 
         currentproducts?.length > 0 ? <CategoriesSection title={"Best Deals On All Products"} url="products" >
           <GridRroduct data={{ categoryName: "", url: "product", products: currentproducts }} />
-        </CategoriesSection> : <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 container px-20">
+        </CategoriesSection> : <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 container px-0 md:px-10 lg:px-20">
           {Array.from({ length: 6 }).map((_, index) => (
             <ContentLoader
               key={index}
               speed={2}
               width={200}
               height={320}
-              viewBox="0 0 200 320"
+              viewBox="0 0 250 320"
               backgroundColor="#f3f3f3"
               foregroundColor="#ecebeb"
               className="w-full"

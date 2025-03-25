@@ -30,9 +30,9 @@ function AboutUsPage() {
 
       <section className='w-full flex flex-col items-start gap-4 container py-10 lg:py-20 px-3 md:px-10 lg:px-20'>
 
-        <h1 className=' text-2xl md:text-3xl lg:text-5xl text-center w-full h-auto py-3 font-medium text-primary uppercase'>valinor & Pelori</h1>
+        <h1 className=' text-2xl md:text-3xl lg:text-5xl text-center w-full h-auto py-3 font-medium text-primary uppercase'>Tread & Trend</h1>
         <p className='w-full relative  text-lg  h-auto py-2 font-medium text-gray-600'>
-          <strong className='text-primary text-base md:text-lg'>About Valinor & Pelori </strong>
+          <strong className='text-primary text-base md:text-lg'>About Tread & Trend </strong>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni alias, quis nihil eligendi eum modi dolores minima in voluptate dolorum deserunt illum atque architecto perspiciatis odit tenetur hic nemo amet?
         </p>
 
@@ -43,7 +43,7 @@ function AboutUsPage() {
           <source src="movie.mp4" type="video/mp4" />
         </video>
         <p className='w-full relative  text-base md:text-lg container px-3 md:px-10 lg:px-20 h-auto py-2 font-medium text-gray-600'>
-          <strong className='text-primary text-base md:text-lg'>History of Valinor & Pelori </strong>
+          <strong className='text-primary text-base md:text-lg'>History of Tread & Trend </strong>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni alias, quis nihil eligendi eum modi dolores minima in voluptate dolorum deserunt illum atque architecto perspiciatis odit tenetur hic nemo amet?
         </p>
       </section>
@@ -61,7 +61,7 @@ function AboutUsPage() {
 
       <section className='w-full flex flex-col items-start gap-4 container py-10 lg:py-20  px-3 md:px-10 lg:px-20'>
         <p className='w-full relative  text-lg  h-auto py-2 font-medium text-gray-600'>
-          <strong className='text-primary text-lg'>Vision And Mision of Valinor & Pelori </strong>
+          <strong className='text-primary text-lg'>Vision And Mision of Tread & Trend </strong>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni alias, quis nihil eligendi eum modi dolores minima in voluptate dolorum deserunt illum atque architecto perspiciatis odit tenetur hic nemo amet?
         </p>
       </section>
@@ -70,7 +70,7 @@ function AboutUsPage() {
 
         <h1 className='text-5xl text-center w-full h-auto py-3 font-medium text-primary uppercase'>FAQS</h1>
         <p className='w-full relative  text-lg  h-auto py-2 font-medium text-gray-600'>
-          <strong className='text-primary text-base md:text-lg'>FAQS for Valinor & Pelori </strong>
+          <strong className='text-primary text-base md:text-lg'>FAQS for Tread & Trend </strong>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni alias, quis nihil eligendi eum modi dolores minima in voluptate dolorum deserunt illum atque architecto perspiciatis odit tenetur hic nemo amet?
         </p>
 

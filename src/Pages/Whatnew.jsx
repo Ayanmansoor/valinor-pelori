@@ -44,16 +44,16 @@ function Whatnew() {
       <CommonSeoFile {...metadata} />
 
       <section className='w-full relative h-auto flex items-start bg-black p-6 container md:px-10   xl:px-20 '>
-        <video src="/" className='w-full relative h-[500px] '></video>
+        <video src="/" className='w-full relative h-[250px] md:h-[350px] lg:h-[500px] '></video>
       </section>
 
       <section className='container sm:h-[350px] relative flex flex-col-reverse sm:grid py-5 grid-cols-1 sm:grid-cols-[1fr_1fr]  gap-3 sm:gap-1 px-3 md:px-10   xl:px-20'>
         <div className='w-full relative h-full '>
           <img src="https://images.unsplash.com/photo-1734942416345-ed84ae363c5e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='w-full relative sm:absolute  h-full object-cover ' />
         </div>
-        <div className='w-full relative flex flex-col justify-center items-start gap-1 px-10'>
+        <div className='w-full relative flex flex-col justify-center items-start gap-1 px-2 md:px-5 lg:px-10'>
           {/* <p className='text-[16px] font-medium text-primary'>Running</p> */}
-          <h2 className='text-p20 font-medium '>   Experience True Craftsmanship .</h2>
+          <h2 className='text-p20 font-medium '>Experience True Craftsmanship</h2>
           <p className='text-[16px] font-normal '>Discover our exceptional collection where every piece is a testament to precision and elegance. Crafted to elevate your style, our designs are made for those who appreciate the finest details.</p>
           <Link href="" className=' w-fti transition-all duration-300 relative h-auto px-4 py-1 text-white hover:bg-white border border-transparent  hover:border-primary hover:text-primary  rounded-full bg-primary mt-2 sm:mt-5'>Buy Now</Link>
         </div>

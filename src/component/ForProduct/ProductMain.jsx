@@ -84,7 +84,7 @@ function ProductMain({ product }) {
                 >
                     {
                         Image?.map((item, index) => (
-                            <SwiperSlide key={index} className='max-w-full   relative h-full '>
+                            <SwiperSlide key={index} className='max-w-full   relative h-full border '>
                                 <img src={`${item?.image_url}` || ""} alt={`${item.name}`} height={500} width={500} className='w-full relative h-full ' />
                             </SwiperSlide>
                         ))

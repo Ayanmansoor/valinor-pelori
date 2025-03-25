@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom'
 
 function ProductFilter({ collection }) {
     return (
-        <section className='w-full sticky top-10   h-fit  bg-white hidden flex-col items-start gap-3 lg:flex'>
+        <section className='w-full sticky top-10   h-fit  bg-white   flex-col items-start gap-3 flex'>
             <div className='w-full relative flex flex-wrap h-auto'></div>
-            <div className='w-full relative  flex h-fit bg-transparent flex-col items-start px-2'>
+            <div className='w-full relative  flex h-fit bg-transparent flex-col items-start  lg:px-2'>
                 <Accordion type="single" collapsible className='w-full relative h-auto bg-transparent'>
                     <AccordionItem value="item-1" className="w-full relative h-auto" >
                         <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">Collections</AccordionTrigger>

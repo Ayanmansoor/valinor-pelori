@@ -12,7 +12,6 @@ function Collectionsection(props) {
         <Swiper
             slidesPerView={"auto"}
             direction={"horizontal"}
-            spaceBetween={5}
 
             scrollbar={{
                 hide: true,

@@ -123,7 +123,7 @@ function Category() {
         )
       }
 
-      <section className='container bg-white sm:h-[350px] relative flex flex-col-reverse sm:grid py-5 grid-cols-1 sm:grid-cols-[1fr_1fr]  gap-3 sm:gap-1 md:px-10   xl:px-20'>
+      <section className='container bg-white sm:h-[350px] relative flex flex-col-reverse sm:grid py-5 grid-cols-1 sm:grid-cols-[1fr_1fr]  gap-3 px-3 sm:gap-1 md:px-10   xl:px-20'>
         <div className='w-full relative flex flex-col justify-center items-start gap-1'>
           <p className='text-[16px] font-medium text-primary'>Running</p>
           <h2 className='text-p20 font-medium '>Lorem ipsum dolor sit amet .</h2>

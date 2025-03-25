@@ -1,21 +1,21 @@
 import React, { useRef } from 'react'
 
-function Specification({product}) {
-   
+function Specification({ product }) {
+
     return (
-    <section className='w-full relative container  h-auto flex flex-col gap-8 bg-secondary px-5  md:px-10   xl:px-20   '>
+        <section className='w-full relative container  h-auto flex flex-col gap-8 bg-secondary px-5  md:px-10   xl:px-20   '>
 
-        <div className='w-full relative h-auto flex flex-col'>
-            <span className='w-fit relative px-5  py-1 border-t border-black text-primary bg-white text-base font-medium '>
-                Details
-            </span>
-            <div className='w-full py-5 px-5  border  relative h-auto flex flex-col '>
-                <h2 className='text-xl mb-1 font-meidum text-footerfont'>{product?.brands?.name}</h2>
-                <p className='text-base font-normal text-gray-500'>{product?.description}</p>
+            <div className='w-full relative h-auto flex flex-col'>
+                <span className='w-fit relative px-5  py-1 border-t border-black text-primary bg-white text-base font-medium '>
+                    Details
+                </span>
+                <div className='w-full py-5 px-5  border  relative h-auto flex flex-col '>
+                    <h2 className=' text-base lg:text-xl mb-1 font-meidum text-footerfont'>{product?.brands?.name}</h2>
+                    <p className=' text-sm ms:text-base font-normal text-gray-500'>{product?.description}</p>
+                </div>
             </div>
-        </div>
 
-        {/* <div className='w-full relative h-auto flex flex-col'>
+            {/* <div className='w-full relative h-auto flex flex-col'>
             <span className='w-fit relative px-5  py-1 border-t border-black text-primary bg-white text-base font-medium '>
                 Additional Information
             </span>
@@ -32,9 +32,9 @@ function Specification({product}) {
             </ul>
         </div>
          */}
-       
 
-    </section>
+
+        </section>
     )
 }
 
