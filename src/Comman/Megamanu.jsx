@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom';
 
 function Megamanu({ children }) {
     const [slug, setslug] = useState('')
-    const { data: collections, isLoading: collectionloading, isError: collectionerror } = useQuery({
+    const { data: collections=[], isLoading: collectionloading, isError: collectionerror } = useQuery({
         queryKey: ["megamanucollections"],
         queryFn: getAllCollections,
         staleTime: 10 * 60 * 1000, // Data remains fresh for 10 minutes
         cacheTime: 15 * 60 * 1000, // Data stays in cache for 15 minutes
     });
-    const { data: products, isLoading, isError } = useQuery({
+    const { data: products=[], isLoading, isError } = useQuery({
         queryKey: ["megamanuslugdata", slug], // Cache per collection
         enabled: !!slug,
         queryFn: () => getProductBaseOnCollection(slug),
@@ -53,7 +53,7 @@ function Megamanu({ children }) {
                                     </p>
                                     <ul class="mt-3 w-full realtive h-[300px] flex flex-col gap-1  overflow-hidden overflow-y-auto ">
                                         {
-                                            collections && collections?.map((item, index) => (
+                                            Array.isArray(collections) && collections?.map((item, index) => (
                                                 <Link to={`collection/${item?.slug}`} className={`text-sm  capitalize font-medium hover:bg-gray-100  cursor-pointer  py-1 px-2 flex items-center gap-1 ${item.slug == slug ? "bg-gray-200" : "bg-transparent"} `} onMouseEnter={() => setslug(item?.slug)} key={index} >
                                                     {item.name}
                                                 </Link>
@@ -71,7 +71,7 @@ function Megamanu({ children }) {
 
                                     <ul class="mt-4 text-[15px] grid grid-cols-5 h-[300px] gap-4  items-start justify-start overflow-hidden overflow-y-auto">
                                         {
-                                            products && products?.map((item, index) => (
+                                            Array.isArray(products) && products?.map((item, index) => (
                                                 <MegamanuCard collecitonData={item} key={index} />
                                             ))
                                         }
