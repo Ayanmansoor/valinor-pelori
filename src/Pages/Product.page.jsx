@@ -9,6 +9,7 @@ import CategoriesSection from '@/component/Category/CategoriesSection';
 import LeatestCollection from '@/component/ForProduct/LeatestCollection';
 import { useQuery } from 'react-query';
 import ContentLoader from "react-content-loader";
+import CommonSeoFile from '@/Comman/CommonSeoFile';
 
 import {
   useLocation,
@@ -17,6 +18,32 @@ import {
 } from "react-router-dom"
 import Specification from '@/component/ForProduct/Specification';
 import { getProductData, getAllProducts, getRelatedProducts } from '@/Supabase/SupabaseApi';
+
+
+const getProductMetadata = (name, slug) => ({
+  title: `${name || "Elegant Footwear"} - Tread & Trend | Ladies' Shoes & Bags`,
+  description: "Shop the latest elegant ladies' footwear and accessories at Tread & Trend. Discover new collections today.",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: `${name || "Elegant Footwear"} - Tread & Trend | Ladies' Shoes & Bags`,
+    description: "Stay ahead of the trends with Tread & Trend’s latest collection. Shop new arrivals in elegant shoes, bags, and sandals.",
+    url: "/new-arrivals",
+    locale: "en_us",
+    siteName: "Tread & Trend",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@TreadTrend",
+    creator: "@TreadTrend",
+    title: `${name || "Elegant Footwear"} - Tread & Trend | Ladies' Shoes & Bags`,
+    description: "Shop the latest elegant ladies' footwear and accessories at Tread & Trend. Discover new collections today.",
+  },
+  canonical: `/product/${slug}`,
+});
 
 
 
@@ -55,6 +82,7 @@ function Product() {
     retry: 2, // Retry twice on failure
   });
 
+  const metadata = getProductMetadata(product?.name, product?.slug)
 
 
 
@@ -124,15 +152,14 @@ function Product() {
 
   return (
     <>
+      <CommonSeoFile {...metadata} />
       <section className=' relative bg-secondary h-auto  pb-4 mt-1 '>
         <div className='w-full mx-auto h-full container px-3 relative  flex flex-col justify-between gap-2 bg-secondary md:flex-row  md:px-10   xl:px-20  '>
 
-          <div className='  md:max-h-auto  w-full relative p-1 md:h-full md:w-[60%] '>
+          <div className='  md:max-h-auto  w-full relative p-1 md:h-full md:w-[50%] '>
             <ProductMain product={product} />
-
           </div>
-
-          <ProductAbout product={product} />
+            <ProductAbout product={product} />
 
         </div>
       </section>
@@ -165,39 +192,40 @@ function Product() {
 
       {
 
-        allproducts?.length > 0 ? <CategoriesSection title={"Best Deals On All Products"} url="products" >
-          <GridRroduct data={{ categoryName: "", url: "product", products: allproducts }} />
-        </CategoriesSection> : <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 container px-20">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <ContentLoader
-              key={index}
-              speed={2}
-              width={200}
-              height={320}
-              viewBox="0 0 200 320"
-              backgroundColor="#f3f3f3"
-              foregroundColor="#ecebeb"
-              className="w-full"
-            >
-              {/* Product Image */}
-              <rect x="10" y="10" rx="10" ry="10" width="180" height="180" />
+        allproducts?.length > 0 ?
+          <CategoriesSection title={"Best Deals On All Products"} url="products" >
+            <GridRroduct data={{ categoryName: "", url: "product", products: allproducts }} />
+          </CategoriesSection> : <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 container px-20">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <ContentLoader
+                key={index}
+                speed={2}
+                width={200}
+                height={320}
+                viewBox="0 0 200 320"
+                backgroundColor="#f3f3f3"
+                foregroundColor="#ecebeb"
+                className="w-full"
+              >
+                {/* Product Image */}
+                <rect x="10" y="10" rx="10" ry="10" width="180" height="180" />
 
-              {/* Discount Badge */}
-              <rect x="10" y="10" rx="4" ry="4" width="40" height="20" />
+                {/* Discount Badge */}
+                <rect x="10" y="10" rx="4" ry="4" width="40" height="20" />
 
-              {/* Product Name */}
-              <rect x="10" y="200" rx="4" ry="4" width="160" height="15" />
-              <rect x="10" y="220" rx="4" ry="4" width="100" height="15" />
+                {/* Product Name */}
+                <rect x="10" y="200" rx="4" ry="4" width="160" height="15" />
+                <rect x="10" y="220" rx="4" ry="4" width="100" height="15" />
 
-              {/* Pricing */}
-              <rect x="10" y="250" rx="4" ry="4" width="70" height="15" />
-              <rect x="90" y="250" rx="4" ry="4" width="50" height="15" />
+                {/* Pricing */}
+                <rect x="10" y="250" rx="4" ry="4" width="70" height="15" />
+                <rect x="90" y="250" rx="4" ry="4" width="50" height="15" />
 
-              {/* Brand */}
-              <rect x="10" y="280" rx="4" ry="4" width="120" height="12" />
-            </ContentLoader>
-          ))}
-        </div>
+                {/* Brand */}
+                <rect x="10" y="280" rx="4" ry="4" width="120" height="12" />
+              </ContentLoader>
+            ))}
+          </div>
       }
 
 

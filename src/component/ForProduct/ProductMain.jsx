@@ -80,12 +80,12 @@ function ProductMain({ product }) {
 
                     grabCursor={true}
                     modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper2 max-h-[500px] relative w-full "
+                    className="mySwiper2  max-h-[300px] extrasmall:max-h-[400px] sm:max-h-[500px] relative w-full "
                 >
                     {
                         Image?.map((item, index) => (
                             <SwiperSlide key={index} className='max-w-full   relative h-full border '>
-                                <img src={`${item?.image_url}` || ""} alt={`${item.name}`} height={500} width={500} className='w-full relative h-full ' />
+                                <img src={`${item?.image_url}` || ""} alt={`${item.name}`} height={500} width={500} className='w-full relative h-full object-center ' />
                             </SwiperSlide>
                         ))
 
@@ -94,7 +94,7 @@ function ProductMain({ product }) {
                 <Swiper
                     onSwiper={setThumbsSwiper}
                     spaceBetween={20}
-                    slidesPerView={3}
+                    slidesPerView={"auto"}
                     // direction={'vertical'}
                     freeMode={true}
                     // grabCursor={true}
@@ -118,8 +118,8 @@ function ProductMain({ product }) {
                 >
                     {
                         Image?.map((item, index) => (
-                            <SwiperSlide key={index} className='max-w-full   relative h-full '>
-                                <img src={`${item?.image_url}` || ""} height={500} width={500} className='w-full relative h-full ' />
+                            <SwiperSlide key={index} className='max-w-fit   relative h-full '>
+                                <img src={`${item?.image_url}` || ""} height={500} width={500} className=' max-w-[100px] relative h-full  ' />
                             </SwiperSlide>
                         ))
 

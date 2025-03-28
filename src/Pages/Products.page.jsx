@@ -9,9 +9,6 @@ import SecondHero from '@/component/ForHome/SecondHero'
 import Discount from '@/component/ForHome/Discount'
 import GridRroduct from '@/component/ForHome/GridRroduct'
 import Hero from '@/component/ForHome/Hero'
-// import {
-//     CarouselItem,
-// } from "@/components/ui/carousel"
 import ProductFilter from '@/component/ForProduct/ProductFilter'
 import { IoFilterOutline } from "react-icons/io5";
 import MobFilterSheet from '@/Comman/MobFilterSheet'
@@ -19,26 +16,26 @@ import { getAllProducts, getAllCollections } from '@/Supabase/SupabaseApi'
 import ContentLoader from 'react-content-loader'
 
 const metadata = {
-    title: "Products - Valinor & Pelóri | Elegant Ladies' Shoes, Bags & Sandals",
-    description: "Explore our full range of elegant ladies' shoes, bags, and sandals at Valinor & Pelóri. Find the perfect match for your style and sophistication.",
+    title: "Products - Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
+    description: "Explore our full range of elegant ladies' shoes, bags, and sandals at Tread & Trend. Find the perfect match for your style and sophistication.",
     robots: {
         index: true,
         follow: true,
     },
     openGraph: {
-        title: "Products - Valinor & Pelóri | Elegant Ladies' Shoes, Bags & Sandals",
-        description: "Browse Valinor & Pelóri’s extensive collection of premium footwear and accessories. Elevate your wardrobe with luxury shoes and handbags.",
+        title: "Products - Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
+        description: "Browse Tread & Trend’s extensive collection of premium footwear and accessories. Elevate your wardrobe with luxury shoes and handbags.",
         url: "/products",
         locale: "en_us",
-        siteName: "Valinor & Pelóri",
+        siteName: "Tread & Trend",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        site: "@ValinorPelori",
-        creator: "@ValinorPelori",
-        title: "Products - Valinor & Pelóri | Elegant Ladies' Shoes, Bags & Sandals",
-        description: "Discover luxurious ladies' footwear and accessories at Valinor & Pelóri. Shop timeless elegance today.",
+        site: "@TreadTrend",
+        creator: "@TreadTrend",
+        title: "Products - Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
+        description: "Discover luxurious ladies' footwear and accessories at Tread & Trend. Shop timeless elegance today.",
     },
     canonical: "/products",
 };

@@ -23,29 +23,30 @@ import { getAllCollections, getAllBanner, getAllTrendingProducts, getAllProducts
 
 
 const metadata = {
-  title: "Valinor & Pelóri | Elegant Ladies' Shoes, Bags & Sandals",
-  description: "Discover timeless elegance with Valinor & Pelóri. Explore our exquisite collection of ladies' shoes, bags, and sandals crafted with sophistication and style.",
+  title: "Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
+  description: "Discover timeless elegance with Tread & Trend. Explore our exquisite collection of ladies' shoes, bags, and sandals crafted with sophistication and style.",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Valinor & Pelóri | Elegant Ladies' Shoes, Bags & Sandals",
-    description: "Shop luxurious ladies' footwear and accessories at Valinor & Pelóri. Elevate your style with premium shoes, handbags, and sandals for every occasion.",
+    title: "Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
+    description: "Shop luxurious ladies' footwear and accessories at Tread & Trend. Elevate your style with premium shoes, handbags, and sandals for every occasion.",
     url: "/",
     locale: "en_us",
-    siteName: "Valinor & Pelóri",
+    siteName: "Tread & Trend",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image", // Card type (e.g., summary or summary_large_image)
-    site: "@ValinorPelori", // Your brand's Twitter handle
-    creator: "@ValinorPelori", // The creator's Twitter handle (if different)
-    title: "Valinor & Pelóri | Elegant Ladies' Shoes, Bags & Sandals",
-    description: "Shop luxurious ladies' footwear and accessories at Valinor & Pelóri. Elevate your style with premium shoes, handbags, and sandals for every occasion.",
+    card: "summary_large_image",
+    site: "@TreadTrend", // Your brand's Twitter handle
+    creator: "@TreadTrend", // The creator's Twitter handle (if different)
+    title: "Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
+    description: "Shop luxurious ladies' footwear and accessories at Tread & Trend. Elevate your style with premium shoes, handbags, and sandals for every occasion.",
   },
   canonical: "/",
 };
+
 
 let products = [
   {

@@ -15,7 +15,11 @@ function ProductFilter({ collection }) {
             <div className='w-full relative  flex h-fit bg-transparent flex-col items-start  lg:px-2'>
                 <Accordion type="single" collapsible className='w-full relative h-auto bg-transparent'>
                     <AccordionItem value="item-1" className="w-full relative h-auto" >
-                        <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">Collections</AccordionTrigger>
+                        <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">
+                            <p>
+                                Collections
+                            </p>
+                        </AccordionTrigger>
                         <AccordionContent className="w-full relative h-auto py-2 text-base font-medium  px-4 flex flex-wrap gap-2 ">
                             {
                                 collection?.map((item, index) => (
@@ -25,7 +29,11 @@ function ProductFilter({ collection }) {
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2" className="w-full relative h-auto">
-                        <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">Sizes</AccordionTrigger>
+                        <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">
+                            <p>
+                                Sizes
+                            </p>
+                        </AccordionTrigger>
                         <AccordionContent className="w-full relative h-auto py-2 text-base font-medium flex flex-wrap gap-2 px-4 ">
                             <span className='text-base font-medium text-black border border-black px-3 py-1'>5</span>
                             <span className='text-base font-medium text-black border border-black px-3 py-1'>6</span>
@@ -37,7 +45,11 @@ function ProductFilter({ collection }) {
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3" className="w-full relative h-auto">
-                        <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">Price</AccordionTrigger>
+                        <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">
+                            <p>
+                                Price
+                            </p>
+                        </AccordionTrigger>
                         <AccordionContent className="w-full relative h-auto py-2 text-base  flex flex-wrap gap-2 font-medium px-4 ">
                             <span className='text-base font-medium text-black border border-black px-3 py-1'>{"500"}</span>
                             <span className='text-base font-medium text-black border border-black px-3 py-1'>{"500 < 1000"}</span>
@@ -45,11 +57,15 @@ function ProductFilter({ collection }) {
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-4" className="w-full relative h-auto">
-                        <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">Genders</AccordionTrigger>
+                        <AccordionTrigger className="w-full relative h-auto py-2 text-base font-medium  px-4">
+                            <p>
+                                Genders
+                            </p>
+                        </AccordionTrigger>
                         <AccordionContent className="w-full relative h-auto py-2 text-base  flex flex-wrap gap-2 font-medium px-4 ">
-                        <span className='text-base font-medium text-black border border-black px-3 py-1' >MEN</span>
-                        <span className='text-base font-medium text-black border border-black px-3 py-1' >WOMEN</span>
-                        <span className='text-base font-medium text-black border border-black px-3 py-1' >KIDS</span>
+                            <span className='text-base font-medium text-black border border-black px-3 py-1' >MEN</span>
+                            <span className='text-base font-medium text-black border border-black px-3 py-1' >WOMEN</span>
+                            <span className='text-base font-medium text-black border border-black px-3 py-1' >KIDS</span>
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

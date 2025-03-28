@@ -51,7 +51,7 @@ const router = createBrowserRouter(
         } />
         <Route path='/trending' element={          //------> redirecting to specific product  wnat to main page
           <Suspense fallback={<><Pageloading /></>}>
-            <Products />
+            <Bestdeal />
           </Suspense>
         } />
         <Route path='/product/:slug' element={

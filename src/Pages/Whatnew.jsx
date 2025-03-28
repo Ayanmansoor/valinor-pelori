@@ -6,30 +6,33 @@ import CategoriesSection from '@/component/Category/CategoriesSection'
 import CommonSeoFile from '@/Comman/CommonSeoFile'
 import { useQuery } from 'react-query'
 import { getAllNewArrivalProducts } from '@/Supabase/SupabaseApi'
+
+
 const metadata = {
-  title: "New Arrivals - Valinor & Pelóri | Latest Ladies' Shoes & Bags",
-  description: "Be the first to explore Valinor & Pelóri’s latest arrivals in ladies' shoes, bags, and sandals. Discover new trends and timeless elegance.",
+  title: "New Arrivals - Tread & Trend | Latest Ladies' Shoes & Bags",
+  description: "Be the first to explore Tread & Trend’s latest arrivals in ladies' shoes, bags, and sandals. Discover new trends and timeless elegance.",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "New Arrivals - Valinor & Pelóri | Latest Ladies' Shoes & Bags",
-    description: "Stay ahead of the trends with Valinor & Pelóri’s latest collection. Shop new arrivals in elegant shoes, bags, and sandals.",
+    title: "New Arrivals - Tread & Trend | Latest Ladies' Shoes & Bags",
+    description: "Stay ahead of the trends with Tread & Trend’s latest collection. Shop new arrivals in elegant shoes, bags, and sandals.",
     url: "/new-arrivals",
     locale: "en_us",
-    siteName: "Valinor & Pelóri",
+    siteName: "Tread & Trend",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@ValinorPelori",
-    creator: "@ValinorPelori",
-    title: "New Arrivals - Valinor & Pelóri | Latest Ladies' Shoes & Bags",
-    description: "Shop the latest elegant ladies' footwear and accessories at Valinor & Pelóri. Discover new collections today.",
+    site: "@TreadTrend",
+    creator: "@TreadTrend",
+    title: "New Arrivals - Tread & Trend | Latest Ladies' Shoes & Bags",
+    description: "Shop the latest elegant ladies' footwear and accessories at Tread & Trend. Discover new collections today.",
   },
   canonical: "/new-arrivals",
 };
+
 
 function Whatnew() {
 

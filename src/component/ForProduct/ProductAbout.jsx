@@ -59,7 +59,7 @@ function ProductAbout({ product }) {
 
     return (
         <>
-            <div className='relative flex items-start h-auto  flex-col w-full md:w-[40%] py-5 md:pl-5  lg:pl-10 '>
+            <div className='relative flex items-start h-auto  flex-col w-full md:w-[50%] py-5 md:pl-5  lg:pl-10 '>
 
                 <div className='flex items-center justify-between   w-full relative '>
 
@@ -92,10 +92,10 @@ function ProductAbout({ product }) {
 
                     </p>
 
-                    <div className=' flex flex-wrap  items-center relative  justify-between   w-full '>
+                    <div className=' flex flex-wrap  items-center relative  justify-start   w-full '>
                         {
                             colors?.map((color, index) => (
-                                <span className={`p-4  rounded-full cursor-pointer  border  ${color.name === productcart?.colors?.color?.name ? "  border-primary p-1" : " border-transparent"} ${index >= 1 ? "-ml-[600px]" : ""} `} style={{ background: color.hex }} key={index}
+                                <span className={`p-4  rounded-full cursor-pointer  border  ${color.name === productcart?.colors?.color?.name ? "  border-primary p-1" : " border-transparent"} ${index >= 1 ? "-m-[4px]" : ""} `} style={{ background: color.hex }} key={index}
                                     onClick={(e) => {
                                         console.log(productcart)
                                         setProductcart((prev) => ({
