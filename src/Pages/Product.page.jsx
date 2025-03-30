@@ -156,7 +156,7 @@ function Product() {
       <section className=' relative bg-secondary h-auto  pb-4 mt-1 '>
         <div className='w-full mx-auto h-full container px-3 relative  flex flex-col justify-between gap-2 bg-secondary md:flex-row  md:px-10   xl:px-20  '>
 
-          <div className='  md:max-h-auto  w-full relative p-1 md:h-full md:w-[50%] '>
+          <div className='  md:max-h-auto  w-full relative p-1 md:h-full  md:w-[60%] lg:w-[55%] '>
             <ProductMain product={product} />
           </div>
             <ProductAbout product={product} />

@@ -59,7 +59,7 @@ function ProductAbout({ product }) {
 
     return (
         <>
-            <div className='relative flex items-start h-auto  flex-col w-full md:w-[50%] py-5 md:pl-5  lg:pl-10 '>
+            <div className='relative flex items-start h-auto  flex-col w-full md:w-[40%] py-5 md:pl-5  lg:pl-10 '>
 
                 <div className='flex items-center justify-between   w-full relative '>
 

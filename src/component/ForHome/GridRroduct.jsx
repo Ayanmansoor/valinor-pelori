@@ -10,7 +10,7 @@ function GridRroduct({data,}) {
   return (
 
 
-    <div className='    w-full   h-auto grid grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(200px,auto))] gap-y-5 gap-x-2 md:gap-x-5  md:gap-y-5 bg-secondary   '>
+    <div className='    w-full   h-auto grid grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(200px,auto))] gap-y-5 gap-x-3 md:gap-x-5  md:gap-y-5 bg-secondary   '>
       {data.products?.map((product, index) => (
         <ProductCard value={{  product:product, ind: `${index}`, url: data.url }} />
       ))}

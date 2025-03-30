@@ -1,4 +1,10 @@
 import React, { useRef } from 'react'
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
 
 function Specification({ product }) {
 
@@ -10,10 +16,28 @@ function Specification({ product }) {
                     Details
                 </span>
                 <div className='w-full py-5 px-5  border  relative h-auto flex flex-col '>
-                    <h2 className=' text-base lg:text-xl mb-1 font-meidum text-footerfont'>{product?.brands?.name}</h2>
+                    <h2 className=' text-base lg:text-base mb-1 font-meidum text-footerfont'>{product?.brands?.name}</h2>
                     <p className=' text-sm ms:text-base font-normal text-gray-500'>{product?.description}</p>
                 </div>
             </div>
+
+
+            <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                    <AccordionTrigger className='text-base font-medium px-2'>Return Policy</AccordionTrigger>
+                    <AccordionContent className="w-full relative h-auto px-2 flex text-sm text-primary">
+                        Yes. It adheres to the WAI-ARIA design pattern.
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                    <AccordionTrigger className='text-base font-medium px-2'>Shiping Policy</AccordionTrigger>
+                    <AccordionContent className="w-full relative h-auto px-2 flex text-sm text-primary">
+                        Yes. It adheres to the WAI-ARIA design pattern.
+                    </AccordionContent>
+                </AccordionItem>
+            </Accordion>
+
+
 
             {/* <div className='w-full relative h-auto flex flex-col'>
             <span className='w-fit relative px-5  py-1 border-t border-black text-primary bg-white text-base font-medium '>

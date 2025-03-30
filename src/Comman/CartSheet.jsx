@@ -101,7 +101,7 @@ function CartSheet({ children }) {
                     <SheetTitle className="font-medium text-2xl border-b pb-2">Carts</SheetTitle>
 
 
-                    <section className='w-full relative h-auto gap-2 grid grid-cols-1 extrasmall:grid-cols-2 md:flex flex-col max-h-[60vh]  md:max-h-[80vh] overflow-y-auto py-2' id="style-3">
+                    <section className='w-full relative h-auto gap-2 grid grid-cols-1 extrasmall:grid-cols-2 md:flex flex-col max-h-[60vh] overflow-y-auto py-2' id="style-3">
                         {
                             cart.map((item, index) => (
                                 <div className='w-full border p-2 rounded-lg relative h-auto flex flex-col   md:grid  md:grid-cols-[auto_1fr_auto_auto]  items-start md:items-center justify-between gap-1' key={index}>
@@ -149,7 +149,7 @@ function CartSheet({ children }) {
 
                     </section>
 
-                    <SheetFooter>
+                    <SheetFooter className='absolute bottom-3 w-full left-0 '>
                         {
                             totalProductprice > 0 &&
                             <section className='w-full relative z-30 p-3 h-fit  flex flex-col gap-2 border bg-white  '>

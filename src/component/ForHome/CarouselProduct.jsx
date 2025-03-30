@@ -35,17 +35,13 @@ function CarouselProduct({data,product}) {
                     slidesPerView={"auto"}
                     direction={"horizontal"}
                    
-                    loop={true}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
+                  
                     modules={[Autoplay, Mousewheel, Pagination]}
                     className="mySwiper h-full w-full  relative"
                 >
 
                     {product?.map((product, index) => (
-                        <SwiperSlide className=' w-[250px]  md:w-[300px] h-full relative bg-secondary px-3' key={index} >
+                        <SwiperSlide className=' w-[200px]  md:w-[300px] h-full relative bg-secondary px-2 md:px-3' key={index} >
                             <ProductCard value={{  product:product, ind: `${index}`, url: data.url }} />
                         </SwiperSlide>
                     ))}

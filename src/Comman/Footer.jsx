@@ -34,6 +34,7 @@ function Footer() {
               <Link to={'/about-us'} href="">About us</Link>
               <Link to={'/privacy-policy'} href="">Privacy and Policy</Link>
               <Link to={'/shiping-policy'} href="">Shiping Policy</Link>
+              <Link to={'/return-policy'} href="">Return Policy</Link>
               <Link to={'/about-us'} href="">FAQ</Link>
 
             </ul>

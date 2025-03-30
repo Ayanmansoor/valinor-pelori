@@ -173,7 +173,7 @@ function ProductCard({ value }) {
         </Swiper>
         {
           value?.product?.discounts &&
-          <p className='text-[12px] font-medium text-white bg-red-500 w-fit  h-fit px-1  py-[2px] z-20  absolute top-3 left-3 '>-{value?.product?.discounts?.discount_persent}%</p>
+          <p className='  text-[10px] md:text-[12px] font-medium text-white bg-red-500 w-fit  h-fit px-1  py-[2px] z-20  absolute top-2 left:top-3 left-2 md:left-3 '>-{value?.product?.discounts?.discount_persent}%</p>
         }
 
       </Link>

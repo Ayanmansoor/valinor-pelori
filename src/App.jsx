@@ -34,6 +34,7 @@ const Feedback = lazy(() => import('./Pages/Feedback.page'))
 const Privacypolicy = lazy(() => import("./Pages/Privacy-policy.page"))
 const ShippingPolicy = lazy(() => import("./Pages/Shipping-policy.page"))
 const NotFound = lazy(() => import('./Pages/NotFound'))
+const Returnpolicy = lazy(() => import('./Pages/Return-policy'))
 
 
 
@@ -145,6 +146,12 @@ const router = createBrowserRouter(
         <Route path="/shiping-policy" element={
           <Suspense fallback={<><Pageloading /></>}>
             <ShippingPolicy />
+          </Suspense>}
+        />
+
+        <Route path="/return-policy" element={
+          <Suspense fallback={<><Pageloading /></>}>
+            <Returnpolicy />
           </Suspense>}
         />
 
