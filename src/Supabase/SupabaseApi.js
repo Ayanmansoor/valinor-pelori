@@ -5,10 +5,41 @@ async function getAllProducts() {
   const { data: products, error } = await mysupabase
     .from("products")
     .select("*,discounts(*)")
-    .eq('is_new_arrival',false);
+    .eq("is_new_arrival", false);
   if (products) {
     return products;
   } else {
+    return new Error(error.message);
+  }
+}
+
+async function getAllBlogs() {
+  try {
+    const { data: blogs, error } = await mysupabase.from("blogs").select("*");
+    if (blogs) {
+      return blogs;
+    } else {
+      return new Error(error.message);
+    }
+  } catch (error) {}
+}
+
+async function getblog(slug) {
+  try {
+    if (slug) {
+      const { data, error } = await mysupabase
+        .from("blogs")
+        .select("*")
+        .eq("slug", slug)
+        .single();
+
+      if (data) {
+        return data;
+      } else {
+        return new Error(error.message);
+      }
+    }
+  } catch (error) {
     return new Error(error.message);
   }
 }
@@ -134,8 +165,8 @@ async function getProductBaseOnCollection(slug) {
       collection!inner(id, slug),
       discounts(*)
     `
-      ) // Ensure we join correctly
-      .eq("collection.slug", slug); // Filter based on collection slug
+      )
+      .eq("collection.slug", slug);
 
     if (error) {
       throw new Error(error.message);
@@ -176,4 +207,6 @@ export {
   getRelatedProducts,
   getCollectionBanner,
   getProductBaseOnCollection,
+  getAllBlogs,
+  getblog,
 };

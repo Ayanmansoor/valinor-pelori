@@ -12,6 +12,7 @@ import Trending from '@/component/ForProduct/Trending'
 // import { Link } from 'react-router-dom'
 // import CarouselCategory from '@/component/ForHome/CarouselCategory'
 // import ModernCarousel from '@/component/ForDeal/ModernCarousel'
+import SubscribeUs from '@/Comman/SubscribeUs'
 import LeatestCollection from '@/component/ForProduct/LeatestCollection'
 import CategoriesSection from '@/component/Category/CategoriesSection'
 import CommonSeoFile from '@/Comman/CommonSeoFile'
@@ -48,62 +49,6 @@ const metadata = {
 };
 
 
-let products = [
-  {
-    id: 1,
-    name: "nike shoes",
-    brand: "valinor & peroli",
-    discountprice: 1200,
-    price: 999,
-    sizes: [5, 6, 7, 8, 9, 10, 11],
-    colores: ["red", "green", "yellow", "mustage"],
-    description: ""
-  },
-  {
-    id: 2,
-    name: "nike shoes",
-    brand: "valinor & peroli",
-    discountprice: 1200,
-    price: 999,
-    sizes: [5, 6, 7, 8, 9, 10, 11],
-    colores: ["red", "green", "yellow", "mustage"],
-    description: ""
-
-  },
-  {
-    id: 3,
-    name: "nike shoes",
-    brand: "valinor & peroli",
-    discountprice: 1200,
-    price: 999,
-    sizes: [5, 6, 7, 8, 9, 10, 11],
-    colores: ["red", "green", "yellow", "mustage"],
-    description: ""
-
-  },
-  {
-    id: 4,
-    name: "nike shoes",
-    brand: "valinor & peroli",
-    discountprice: 1200,
-    price: 999,
-    sizes: [5, 6, 7, 8, 9, 10, 11],
-    colores: ["red", "green", "yellow", "mustage"],
-    description: ""
-
-  },
-  {
-    id: 5,
-    name: "nike shoes",
-    brand: "valinor & peroli",
-    discountprice: 1200,
-    price: 999,
-    sizes: [5, 6, 7, 8, 9, 10, 11],
-    colores: ["red", "green", "yellow", "mustage"],
-    description: ""
-
-  }
-]
 
 function Home() {
   const [currentproducts, setCurrentProducts] = useState()
@@ -170,10 +115,15 @@ function Home() {
         <CarouselProduct />
       </CategoriesSection> */}
 
+      {collections?.length ?
+        <CategoriesSection title={"Our Collections"} url="collections" >
+          <Collectionsection data={{ categoryName: "all", url: "collection", collections: collections }} />
+        </CategoriesSection> : ""}
+
       {
 
         currentproducts?.length > 0 ? <CategoriesSection title={"Best Deals On All Products"} url="products" >
-          <GridRroduct data={{ categoryName: "", url: "product", products: currentproducts }} />
+          <GridRroduct data={{ categoryName: "", url: "product", products: currentproducts.slice(0,10) }} />
         </CategoriesSection> : <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 container px-0 md:px-10 lg:px-20">
           {Array.from({ length: 6 }).map((_, index) => (
             <ContentLoader
@@ -213,10 +163,7 @@ function Home() {
       }
 
 
-      {collections?.length ?
-        <CategoriesSection title={"Our Collections"} url="collections" >
-          <Collectionsection data={{ categoryName: "all", url: "collection", collections: collections }} />
-        </CategoriesSection> : ""}
+
 
 
 

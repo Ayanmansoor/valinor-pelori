@@ -43,7 +43,7 @@ function ModernCarousel({ apiData }) {
                   }
 
 
-                  <h2 className='w-full absolute bottom-1 text-sm md:text-base px-3  font-medium text-black line-clamp-2 md:line-clamp-2'>{item?.products?.name}</h2>
+                  <h2 className='w-full absolute bottom-1 text-sm md:text-lg   px-3  font-smibold text-black line-clamp-2 md:line-clamp-2'>{item?.products?.name}</h2>
                 </Link>
               </SwiperSlide>
             )

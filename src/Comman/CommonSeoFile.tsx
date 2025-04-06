@@ -9,7 +9,7 @@ function CommonSeoFile({
   twitter = {},
   canonical,
 }) {
-  
+
   return (
     <Helmet>
       {/* Title and Description */}
@@ -17,7 +17,13 @@ function CommonSeoFile({
       {description && <meta name="description" content={description} />}
 
       {/* Robots Meta Tag */}
-      {robots && <meta name="robots" content={`${robots.index ? 'index' : 'noindex'}, ${robots.follow ? 'follow' : 'nofollow'}`} />}
+      
+      {robots && (
+        <meta
+          name="robots"
+          content={`${robots.index ? 'index' : 'noindex'}, ${robots.follow ? 'follow' : 'nofollow'}, max-video-preview:-1, max-image-preview:large, max-snippet:-1`}
+        />
+      )}
 
       {/* Open Graph Tags */}
       {openGraph?.title && <meta property="og:title" content={openGraph.title} />}

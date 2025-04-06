@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import { getAllProducts } from '@/Supabase/SupabaseApi';
 import CategoriesSection from '@/component/Category/CategoriesSection';
 import CarouselProduct from '@/component/ForHome/CarouselProduct';
+import CommonSeoFile from '@/Comman/CommonSeoFile';
 import {
   Accordion,
   AccordionContent,
@@ -23,11 +24,34 @@ function AboutUsPage() {
     retry: 2,
   });
 
-
+  const metadata = {
+    title: "New Arrivals - Tread & Trend | Latest Ladies' Shoes & Bags",
+    description: "Be the first to explore Tread & Trend’s latest arrivals in ladies' shoes, bags, and sandals. Discover new trends and timeless elegance.",
+    robots: {
+      index: true,
+      follow: true,
+    },
+    openGraph: {
+      title: "New Arrivals - Tread & Trend | Latest Ladies' Shoes & Bags",
+      description: "Stay ahead of the trends with Tread & Trend’s latest collection. Shop new arrivals in elegant shoes, bags, and sandals.",
+      url: "/new-arrivals",
+      locale: "en_us",
+      siteName: "Tread & Trend",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@TreadTrend",
+      creator: "@TreadTrend",
+      title: "New Arrivals - Tread & Trend | Latest Ladies' Shoes & Bags",
+      description: "Shop the latest elegant ladies' footwear and accessories at Tread & Trend. Discover new collections today.",
+    },
+    canonical: "/about-us",
+  };
 
   return (
     <>
-
+      <CommonSeoFile {...metadata} />
       <section className='w-full flex flex-col items-start gap-4 container py-10 lg:py-20 px-3 md:px-10 lg:px-20'>
 
         <h1 className=' text-2xl md:text-3xl lg:text-5xl text-center w-full h-auto py-3 font-medium text-primary uppercase'>Tread & Trend</h1>
@@ -53,7 +77,7 @@ function AboutUsPage() {
 
           <CategoriesSection title={"Our Products "} >
 
-            <CarouselProduct data={{ categoryName: "all", name: "Our Prodcuts", url: 'product' }} product={allproducts} />
+            <CarouselProduct data={{ categoryName: "all", name: "Our Prodcuts", url: 'product' }} product={allproducts.slice(0,10)} />
 
           </CategoriesSection >
         )

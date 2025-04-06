@@ -156,7 +156,7 @@ function Productspage() {
 
                     </div>
 
-                    <GridRroduct data={{ categoryName: "", url: "product", products: allproducts }} />
+                    <GridRroduct data={{ categoryName: "", url: "product", products: allproducts  ,css:'' }} />
 
 
                 </div>

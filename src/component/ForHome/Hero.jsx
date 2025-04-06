@@ -18,9 +18,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
 
-function Hero({ bannerImages }) {
+function Hero({ bannerImages ,css }) {
     return (
-        <section className='w-full relative h-[40vh] sm:h-[90vh]  '>
+        <section className={`w-full relative ${css ? css : " h-[40vh] sm:h-[90vh]"}  `}>
 
             <>
                 <Swiper pagination={true}

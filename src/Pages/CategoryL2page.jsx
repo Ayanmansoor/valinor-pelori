@@ -11,37 +11,50 @@ import CommonSeoFile from '@/Comman/CommonSeoFile'
 import ProductFilter from '@/component/ForProduct/ProductFilter'
 import MobFilterSheet from '@/Comman/MobFilterSheet'
 import { IoFilterOutline } from 'react-icons/io5'
-import { getProductBaseOnCollection, getAllCollections } from '@/Supabase/SupabaseApi'
+import { getProductBaseOnCollection, getAllCollections, getAllBanner } from '@/Supabase/SupabaseApi'
 
-const metadata = {
-    title: "Collection - Valinor & Pelóri | Luxury Ladies' Footwear & Accessories",
-    description: "Discover the full collection of ladies' shoes, bags, and sandals at Valinor & Pelóri. Timeless elegance, sophisticated craftsmanship.",
+const getCollectionMetadata = (title, discription, slug) => ({
+    title: ` ${title} - MarkLine Fashions | Timeless Ladies' Footwear & Accessories`,
+    description: `${discription}`,
     robots: {
         index: true,
         follow: true,
+        "max-video-preview": "-1",
+        "max-image-preview": "large",
+        "max-snippet": "-1",
     },
     openGraph: {
-        title: "Collection - Valinor & Pelóri | Luxury Ladies' Footwear & Accessories",
-        description: "Explore Valinor & Pelóri’s collection of premium shoes, bags, and sandals. Find luxury pieces that define your style.",
-        url: "/collection",
-        locale: "en_us",
+        title: ` ${title} - MarkLine Fashions | Timeless Ladies' Footwear & Accessories`,
+        description: { discription },
+        url: `https://valinorpelori.com/collection/${slug}`, // Use full URL for better SEO
+        locale: "en_US",
         siteName: "Valinor & Pelóri",
         type: "website",
+        images: [
+            {
+                url: "https://valinorpelori.com/images/collection-preview.jpg", // Example image URL for social previews
+                width: 1200,
+                height: 630,
+                alt: "Valinor & Pelóri Luxury Collection",
+            },
+        ],
     },
     twitter: {
         card: "summary_large_image",
         site: "@ValinorPelori",
         creator: "@ValinorPelori",
-        title: "Collection - Valinor & Pelóri | Luxury Ladies' Footwear & Accessories",
-        description: "Shop the full collection at Valinor & Pelóri. Elegant shoes, handbags, and sandals for sophisticated women.",
+        title: ` ${name} - Valinor & Pelóri | Timeless Ladies' Footwear & Accessories`,
+        description: "Shop our luxurious collection of footwear and accessories. Elevate your style with elegant shoes, handbags, and sandals.",
+        images: ["https://valinorpelori.com/images/collection-preview.jpg"], // Ensure social sharing images are present
     },
-    canonical: "/collection",
-};
+    canonical: `/collection/${slug}`, // Ensure canonical URL points to the main collection page
+});
+
 
 function CategoryL2page() {
     const { slug } = useParams()
     const { data: products, isLoading, isError } = useQuery({
-        queryKey: ["collectiondatabaseonslug", slug], // Cache per collection
+        queryKey: ["collectiondatabaseonslug", slug],
         enabled: !!slug,
         queryFn: () => getProductBaseOnCollection(slug),
         staleTime: 2 * 60 * 1000, // 2 minutes caching
@@ -57,12 +70,31 @@ function CategoryL2page() {
         staleTime: 1000 * 60 * 2,
         retry: 2,
     });
+    const {
+        data: HomeBanner = [],
+        isLoading: bannerLoading,
+        isError: isErrorOnBanner,
+    } = useQuery({
+        queryKey: ["collectionbanner"],
+        queryFn: getAllBanner,
+        staleTime: 1000 * 60 * 2,
+        retry: 2,
+    });
+
+
+    const currentCollection = allcollection.filter((collection, index) => {
+        if (collection.slug == slug) return collection;
+    })
+
+    const metadata = getCollectionMetadata(currentCollection[0]?.name, currentCollection[0]?.description, currentCollection[0]?.slug)
 
 
     return (
         <>
             <CommonSeoFile {...metadata} />
             {/* <Hero categoryName={"category"} /> */}
+            <Hero bannerImages={HomeBanner} css={" h-[40vh] sm:h-[60vh]"} />
+
             {/* <SecondHero categoryName={"category"} /> */}
 
             {/* <CarouselProduct data={{ categoryName: "all" }} />
@@ -74,7 +106,7 @@ function CategoryL2page() {
 
 
             {/* <Discount categoryName={"shoes"} /> */}
-            <section className="w-full relative grid grid-cols-1 container lg:grid-cols-[1fr_3fr] 2xl:grid-cols-[0.6fr_auto] px-0  md:px-10   xl:px-20 ">
+            <section className="w-full relative grid grid-cols-1 mt-5 md:mt-10 container lg:grid-cols-[1fr_3fr] 2xl:grid-cols-[0.6fr_auto] px-0  md:px-10   xl:px-20 ">
                 <span className=' hidden lg:block'>
                     <ProductFilter collection={allcollection} />
                 </span>

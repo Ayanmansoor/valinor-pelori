@@ -19,6 +19,8 @@ function CartSheet({ children }) {
     const { cart, updateQuantity } = useCart();
     const [totalProductprice, setProductprice] = useState(0)
 
+
+
     // useEffect(() => {
     //     const calculateTotals = () => {
     //         let totalPrice = 0;
@@ -105,9 +107,14 @@ function CartSheet({ children }) {
                         {
                             cart.map((item, index) => (
                                 <div className='w-full border p-2 rounded-lg relative h-auto flex flex-col   md:grid  md:grid-cols-[auto_1fr_auto_auto]  items-start md:items-center justify-between gap-1' key={index}>
-                                    <img src="/air-force.png" alt="" className=' w-full md:w-[70px] max-h-[150px] extrasmall:h-[100px] md:h-[70px] relative rounded-md border ' />
+
+                                    {
+                                        <img src={item.image_url?.map((image) => JSON.parse(image))[0]?.image_url} alt="" className=' w-full md:w-[70px] max-h-[180px] extrasmall:h-[100px] md:h-[70px] relative aspect-square rounded-md border ' />
+                                    }
+
+
                                     <span className='flex flex-col items-start  '>
-                                        <p className=' text-[10px]  font-normal text-gray-400 '>WOMEN</p>
+                                        <p className=' text-[10px]  font-normal text-gray-400 '>{item?.gender}</p>
                                         <h2 className=' text-sm text-start lg:text-sm font-medium text-foreground line-clamp-2 '>
                                             {item.name}
                                         </h2>

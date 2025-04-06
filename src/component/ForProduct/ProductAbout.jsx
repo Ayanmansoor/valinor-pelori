@@ -42,7 +42,7 @@ function ProductAbout({ product }) {
         const parseSize = product?.sizes?.map((size) => JSON.parse(size))
         setColors(parseColor)
         setSizes(parseSize)
-            if (parseColor, parseSize) {
+        if (parseColor, parseSize) {
             setProductcart((prev) => (
                 {
                     ...prev, colors: {
@@ -71,12 +71,15 @@ function ProductAbout({ product }) {
                 <div className='flex justify-between items-start sm:items-center w-full relative flex-col  sm:flex-row py-3'>
                     <h2 className='text-p18 font-normal flex items-center gap-2 '>
                         {
-                            product?.discounts?.discount_persent &&
-                            <>
-                                <p className='text-lg md:text-xl font-normal text-red-400 line-through text-nowrap '>$ {product?.price}</p>
-                                <p className=' text-2xl lg:text-3xl  font-medium text-nowrap text-black'>${
-                                    Math.floor(product?.price - (product?.price * (product?.discounts?.discount_persent / 100)))}</p>
-                            </>
+                            product?.discounts?.discount_persent ?
+                                <>
+                                    <p className='text-lg md:text-xl font-normal text-red-400 line-through text-nowrap '>$ {product?.price}</p>
+                                    <p className=' text-2xl lg:text-3xl  font-medium text-nowrap text-black'>${
+                                        Math.floor(product?.price - (product?.price * (product?.discounts?.discount_persent / 100)))}</p>
+                                </>
+                                :
+                                <p className='text-2xl lg:text-4xl  font-medium text-nowrap text-black'>$ {product?.price}</p>
+
                         }
 
                     </h2>
@@ -160,11 +163,11 @@ function ProductAbout({ product }) {
                 <div className='w-full fixed bottom-0 px-4 flex-wrap sm:px-0 bg-white sm:bg-transparent py-2 sm:py-0  z-30 grid-cols-[1fr_auto] md:grid-cols-1 lg:grid-cols-[1fr_auto] gap-5 right-0 grid   items-center sm:relative  '>
                     <div className='w-full relative flex items-center gap-2 md:gap-1 lg:gap-2 '>
                         <BuyDailog product={{ ...product, colors: productcart.colors.color, sizes: productcart.sizes.size, quentity: productcart.quentitys.quentity }}>
-                            <button disabled={colors && size  ?false:true } className=' w-full relative  xl:px-5 py-2 bg-black text-white hover:border-black border border-transparent hover:bg-slate-100 hover:text-black  ' >Quick Buy</button>
+                            <button disabled={colors && size ? false : true} className=' w-full relative  xl:px-5 py-2 bg-black text-white hover:border-black border border-transparent hover:bg-slate-100 hover:text-black  ' >Quick Buy</button>
                         </BuyDailog>
                         {/* <AddToCardPopver currentProduct={product} colors={colors} sizes={size}> */}
 
-                        <button  disabled={colors?.length>0 && size?.length>0 ?false:true} className=' w-full relative xl:px-5 py-2 bg-black text-white hover:border-black border border-transparent hover:bg-slate-100 hover:text-black  ' onClick={handleStateChange} >Add to Cart</button>
+                        <button disabled={colors?.length > 0 && size?.length > 0 ? false : true} className=' w-full relative xl:px-5 py-2 bg-black text-white hover:border-black border border-transparent hover:bg-slate-100 hover:text-black  ' onClick={handleStateChange} >Add to Cart</button>
 
                         {/* </AddToCardPopver>       */}
                     </div>

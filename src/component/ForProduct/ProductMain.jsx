@@ -114,7 +114,7 @@ function ProductMain({ product }) {
 
                     {
                         Image?.map((item, index) => (
-                            <SwiperSlide key={index} className='max-w-fit  relative max-h-fit md:max-h-[100px]   overflow-hidden'>
+                            <SwiperSlide key={index} className='max-w-fit  relative max-h-fit md:max-h-[100px]  border  overflow-hidden'>
                                 <img src={`${item?.image_url}` || ""} height={500} width={500} className='    max-w-[100px] md:max-w-full  max-h-[100px] lg:max-h-[100px] relative object-cover ' />
                             </SwiperSlide>
                         ))

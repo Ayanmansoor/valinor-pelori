@@ -5,6 +5,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Link } from 'react-router-dom'
 
 function Specification({ product }) {
 
@@ -25,14 +26,14 @@ function Specification({ product }) {
             <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                     <AccordionTrigger className='text-base font-medium px-2'>Return Policy</AccordionTrigger>
-                    <AccordionContent className="w-full relative h-auto px-2 flex text-sm text-primary">
-                        Yes. It adheres to the WAI-ARIA design pattern.
+                    <AccordionContent className="w-full relative h-auto px-2 flex flex-col text-sm text-primary">
+                        At MarkLine Fashions, we strive to ensure your complete satisfaction with every purchase. Items may be returned within 15 days of delivery, provided they are unused, in original condition and packaging, including all labels and tags. However, please note that SALE items, shoes, bags, and accessories (except belts) are non-returnable, non-refundable, and non-replaceable. To initiate a return, simply log into your account, go to “My Orders,” and raise a return request. Broken items may be eligible for repairs. Refunds will be processed to the original payment method once your return is approved. At this time, we do not offer exchanges — please place a new order if needed. For full details, please read our <Link to="/privacy-policy"> Return Policy</Link> .
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
                     <AccordionTrigger className='text-base font-medium px-2'>Shiping Policy</AccordionTrigger>
-                    <AccordionContent className="w-full relative h-auto px-2 flex text-sm text-primary">
-                        Yes. It adheres to the WAI-ARIA design pattern.
+                    <AccordionContent className="w-full relative h-auto px-2  text-sm text-primary">
+                        At Markline Fashion, we process and dispatch orders within 1–2 business days (excluding holidays). Delivery typically takes 3–4 business days if conditions are smooth; in case of delays, we’ll notify you promptly. Shipping is free on all orders up to ₹5000, while charges may apply beyond that based on the delivery location and method. We provide tracking details once your order is shipped, so you can stay updated. Please ensure your address is accurate to avoid delivery issues. For damaged items or returns, refer to our <Link to={'/return-policy'} className='text-primary font-semibold cursor-pointer'>Return Policy</Link> Return Policy, or reach out to us at <Link className='text-primary font-semibold cursor-pointer' to={'melto:shipping@marklinefashion.com'}></Link> shipping@marklinefashion.com for assistance.
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>

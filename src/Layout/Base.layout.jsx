@@ -3,20 +3,23 @@ import Nav from '@/Comman/Nav';
 import Footer from '@/Comman/Footer';
 import { Outlet } from 'react-router-dom';
 import SideBar from '@/component/ForMobile/SideBar';
+import SubscribeUs from '@/Comman/SubscribeUs';
 
 function Baselayout() {
-  const [SlideOpen,setSlideOpen]=useState(false)
+  const [SlideOpen, setSlideOpen] = useState(false)
   return (
     <>
 
-        <Nav toOpen={{setSlideOpen,SlideOpen}}/>
-        {/* <Outlet/> */}
-        <div className='overflow-hidden w-full h-auto relative'>
-          <SideBar isOpen={SlideOpen}/>
+      <Nav toOpen={{ setSlideOpen, SlideOpen }} />
+      {/* <Outlet/> */}
+      <div className='overflow-hidden w-full h-auto relative'>
+        <SideBar isOpen={SlideOpen} />
 
-           <Outlet  />
-        </div>
-        <Footer/>
+        <Outlet />
+      </div>
+      <SubscribeUs />
+
+      <Footer />
     </>
   )
 }

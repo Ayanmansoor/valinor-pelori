@@ -1,0 +1,31 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.yourwebsitehere.com/</loc>
+  </url>
+  <url>
+    <loc>https://www.yourwebsitehere.com/about-us</loc>
+  </url>
+  <url>
+    <loc>https://www.yourwebsitehere.com/contact-us</loc>
+  </url>
+  <url>
+    <loc>https://www.yourwebsitehere.com/products</loc>
+  </url>
+  <url>
+    <loc>https://www.yourwebsitehere.com/collections</loc>
+  </url>
+    <url>
+    <loc>https://www.yourwebsitehere.com/new-arrivals</loc>
+  </url>
+  <url>
+    <loc>https://www.yourwebsitehere.com/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://www.yourwebsitehere.com/shiping-policy</loc>
+  </url>
+  <url>
+    <loc>https://www.yourwebsitehere.com/return-policy</loc>
+  </url>
+</urlset>

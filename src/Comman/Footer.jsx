@@ -27,11 +27,12 @@ function Footer() {
               Pages
             </h2>
             <ul className='flex items-start flex-col text-base justify-start gap-2'>
-              <Link to={'/'} href="">Home</Link>
               <Link to={'/new-arrivals'} href="">New Arrived</Link>
               <Link to={'/products'} href="">Proudcts</Link>
               <Link to={'/trending'} href="">Trending</Link>
               <Link to={'/about-us'} href="">About us</Link>
+              <Link to={'/blogs'} href="">Blogs</Link>
+
               <Link to={'/privacy-policy'} href="">Privacy and Policy</Link>
               <Link to={'/shiping-policy'} href="">Shiping Policy</Link>
               <Link to={'/return-policy'} href="">Return Policy</Link>
@@ -62,10 +63,10 @@ function Footer() {
 
             </h2>
             <ul className='flex items-start flex-col text-base  justify-start gap-3'>
-              <li><a href="" className='flex items-center gap-1'><CiInstagram className='text-[20px] hover:text-red-300' /> Instagram</a></li>
-              <li><a href="" className='flex items-center gap-1'><CiFacebook className='text-[20px] hover:text-red-300' /> Facebook</a></li>
-              <li><a href="" className='flex items-center gap-1'><RxTwitterLogo className='text-[20px] hover:text-red-300' /> Twitter</a></li>
-              <li><a href="" className='flex items-center gap-1'><RiTelegramLine className='text-[20px] hover:text-red-300' /> Telegram</a></li>
+              <li><a href="" rel='noreferrer noindex' className='flex items-center gap-1'><CiInstagram className='text-[20px] hover:text-red-300' /> Instagram</a></li>
+              <li><a href="" rel='noreferrer noindex' className='flex items-center gap-1'><CiFacebook className='text-[20px] hover:text-red-300' /> Facebook</a></li>
+              <li><a href="" rel='noreferrer noindex' className='flex items-center gap-1'><RxTwitterLogo className='text-[20px] hover:text-red-300' /> Twitter</a></li>
+              <li><a href="" rel='noreferrer noindex' className='flex items-center gap-1'><RiTelegramLine className='text-[20px] hover:text-red-300' /> Telegram</a></li>
             </ul>
           </div>
 

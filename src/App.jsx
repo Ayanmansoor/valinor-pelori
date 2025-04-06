@@ -1,4 +1,5 @@
-import { useState, lazy, Suspense } from 'react'
+import { useState, lazy, Suspense, useEffect } from 'react'
+import TagManager from 'react-gtm-module'
 import './App.css'
 import Home from './Pages/Home.page'
 // import Product from './Pages/Product.page'
@@ -35,6 +36,9 @@ const Privacypolicy = lazy(() => import("./Pages/Privacy-policy.page"))
 const ShippingPolicy = lazy(() => import("./Pages/Shipping-policy.page"))
 const NotFound = lazy(() => import('./Pages/NotFound'))
 const Returnpolicy = lazy(() => import('./Pages/Return-policy'))
+
+const BlogPage = lazy(() => import("./Pages/Blogs.page"))
+const BlogL2page = lazy(() => import("./Pages/BlogL2.page"))
 
 
 
@@ -128,13 +132,13 @@ const router = createBrowserRouter(
         />
         <Route path="/blogs" element={
           <Suspense fallback={<><Pageloading /></>}>
-            <Loginpage />
+            <BlogPage />
           </Suspense>}
         />
 
         <Route path="/blog/:slug" element={
           <Suspense fallback={<><Pageloading /></>}>
-            <Loginpage />
+            <BlogL2page />
           </Suspense>}
         />
 
@@ -212,9 +216,16 @@ const router = createBrowserRouter(
   )
 )
 
-
+const tagManagerArgs = {
+  gtmId: import.meta.env.VITE_TAGMANAGER
+};
 
 function App() {
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs)
+  }, [])
+
+
   return (
 
     <RouterProvider router={router} />

@@ -20,16 +20,16 @@ import Specification from '@/component/ForProduct/Specification';
 import { getProductData, getAllProducts, getRelatedProducts } from '@/Supabase/SupabaseApi';
 
 
-const getProductMetadata = (name, slug) => ({
+const getProductMetadata = (name, slug, description) => ({
   title: `${name || "Elegant Footwear"} - Tread & Trend | Ladies' Shoes & Bags`,
-  description: "Shop the latest elegant ladies' footwear and accessories at Tread & Trend. Discover new collections today.",
+  description: `${description}`,
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
     title: `${name || "Elegant Footwear"} - Tread & Trend | Ladies' Shoes & Bags`,
-    description: "Stay ahead of the trends with Tread & Trend’s latest collection. Shop new arrivals in elegant shoes, bags, and sandals.",
+    description: `${description}` || "",
     url: "/new-arrivals",
     locale: "en_us",
     siteName: "Tread & Trend",
@@ -40,7 +40,7 @@ const getProductMetadata = (name, slug) => ({
     site: "@TreadTrend",
     creator: "@TreadTrend",
     title: `${name || "Elegant Footwear"} - Tread & Trend | Ladies' Shoes & Bags`,
-    description: "Shop the latest elegant ladies' footwear and accessories at Tread & Trend. Discover new collections today.",
+    description: `${description}` || "",
   },
   canonical: `/product/${slug}`,
 });
@@ -77,12 +77,13 @@ function Product() {
   } = useQuery({
     queryKey: ["relatedProducts", product, slug],
     queryFn: () => getRelatedProducts(product, slug),
-    enabled: !!product && !!slug, // Only run if product and slug exist
-    staleTime: 1000 * 60 * 2, // Keep fresh for 2 minutes
-    retry: 2, // Retry twice on failure
+    enabled: !!product && !!slug,
+    staleTime: 1000 * 60 * 2,
+    retry: 2,
   });
 
-  const metadata = getProductMetadata(product?.name, product?.slug)
+
+  const metadata = getProductMetadata(product?.name, product?.slug, product?.seoDescription)
 
 
 
@@ -159,7 +160,7 @@ function Product() {
           <div className='  md:max-h-auto  w-full relative p-1 md:h-full  md:w-[60%] lg:w-[55%] '>
             <ProductMain product={product} />
           </div>
-            <ProductAbout product={product} />
+          <ProductAbout product={product} />
 
         </div>
       </section>

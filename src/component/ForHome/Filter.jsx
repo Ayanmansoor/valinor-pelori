@@ -18,19 +18,19 @@ function Filter() {
             >
 
                 <SwiperSlide className='max-w-fit relative h-auto px-1 md:px-2'>
-                    <Link to="/collection/women">
-                        <img src="/air-force.png" height={500} width={500} className='w-full border relative max-h-[100px] sm:max-h-[250px]  md:max-h-[300px] lg:max-h-[350px] object-cover' alt="category image" />
+                    <Link to="/collection/MEN">
+                        <img src="/forhim.png" height={500} width={500} className='w-full border relative max-h-[250px]  md:max-h-[300px] lg:max-h-[350px] object-cover' alt="category image" />
                     </Link>
                 </SwiperSlide>
 
                 <SwiperSlide className='max-w-fit relative h-auto  px-1 md:px-2'>
-                    <Link to="/collection/men">
-                        <img src="/court-vision.png" height={500} width={500} className='w-full border relative  max-h-[100px] sm:max-h-[250px] md:max-h-[300px] lg:max-h-[350px] object-cover' alt="category image" />
+                    <Link to="/collection/WOMEN">
+                        <img src="/forher.png" height={500} width={500} className='w-full border relative  max-h-[250px] md:max-h-[300px] lg:max-h-[350px] object-cover' alt="category image" />
                     </Link>
                 </SwiperSlide>
                 <SwiperSlide className='max-w-fit relative h-auto  px-1 md:px-2'>
-                    <Link to={'/collection/kids'}>
-                        <img src="/sabrina-2-mirrored.png" height={500} width={500} className='w-full border relative  max-h-[100px] sm:max-h-[250px]  md:max-h-[300px] lg:max-h-[350px] object-cover' alt="category image" />
+                    <Link to={'/collection/KIDS'}>
+                        <img src="/forKids.png" height={500} width={500} className='w-full border relative  max-h-[250px]  md:max-h-[300px] lg:max-h-[350px] object-cover' alt="category image" />
                     </Link>
                 </SwiperSlide>
 
