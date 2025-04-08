@@ -24,29 +24,30 @@ import { getAllCollections, getAllBanner, getAllTrendingProducts, getAllProducts
 
 
 const metadata = {
-  title: "Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
-  description: "Discover timeless elegance with Tread & Trend. Explore our exquisite collection of ladies' shoes, bags, and sandals crafted with sophistication and style.",
+  title: "Markline | Elegant Ladies' Shoes, Bags & Sandals",
+  description: "Step into timeless elegance with Markline. Explore our curated collection of ladies' shoes, bags, and sandals crafted with sophistication, comfort, and style.",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
-    description: "Shop luxurious ladies' footwear and accessories at Tread & Trend. Elevate your style with premium shoes, handbags, and sandals for every occasion.",
+    title: "Markline | Elegant Ladies' Shoes, Bags & Sandals",
+    description: "Shop premium ladies' footwear and accessories at Markline. Discover luxury shoes, handbags, and sandals designed for elegance and everyday wear.",
     url: "/",
     locale: "en_us",
-    siteName: "Tread & Trend",
+    siteName: "Markline",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@TreadTrend", // Your brand's Twitter handle
-    creator: "@TreadTrend", // The creator's Twitter handle (if different)
-    title: "Tread & Trend | Elegant Ladies' Shoes, Bags & Sandals",
-    description: "Shop luxurious ladies' footwear and accessories at Tread & Trend. Elevate your style with premium shoes, handbags, and sandals for every occasion.",
+    site: "@MarklineFashion", // Update this if you have a real handle
+    creator: "@MarklineFashion", // Same here
+    title: "Markline | Elegant Ladies' Shoes, Bags & Sandals",
+    description: "Shop premium ladies' footwear and accessories at Markline. Discover luxury shoes, handbags, and sandals designed for elegance and everyday wear.",
   },
   canonical: "/",
 };
+
 
 
 
@@ -104,7 +105,7 @@ function Home() {
       <CommonSeoFile {...metadata} />
       <Hero bannerImages={HomeBanner} />
       <section className='w-full relative bg-secondary '>
-        <h2 className='text-h1 font-medium    px-2  md:px-10   xl:px-20  mx-auto pt-10 bg-secondary'>EXPLORE </h2>
+        <h2 className='text-h1 font-medium    px-2  md:px-10   xl:px-20  mx-auto pt-10 bg-secondary uppercase'>Find the Perfect Fit – For Him, Her & Kids </h2>
       </section>
       <Filter />
 
@@ -116,14 +117,14 @@ function Home() {
       </CategoriesSection> */}
 
       {collections?.length ?
-        <CategoriesSection title={"Our Collections"} url="collections" >
+        <CategoriesSection title={"Styles Made for You"} url="collections" >
           <Collectionsection data={{ categoryName: "all", url: "collection", collections: collections }} />
         </CategoriesSection> : ""}
 
       {
 
-        currentproducts?.length > 0 ? <CategoriesSection title={"Best Deals On All Products"} url="products" >
-          <GridRroduct data={{ categoryName: "", url: "product", products: currentproducts.slice(0,10) }} />
+        currentproducts?.length > 0 ? <CategoriesSection title={"Markline Must-Haves"} url="products" >
+          <GridRroduct data={{ categoryName: "", url: "product", products: currentproducts.slice(0, 10) }} />
         </CategoriesSection> : <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 container px-0 md:px-10 lg:px-20">
           {Array.from({ length: 6 }).map((_, index) => (
             <ContentLoader
@@ -169,7 +170,7 @@ function Home() {
 
       {
         newArrivals?.length > 0 &&
-        <CategoriesSection title={"new Arrivals "} url="newarrivals" >
+        <CategoriesSection title={"Latest at Markline"} url="newarrivals" >
           <SecondHero categoryName={"Shoes"} data={newArrivals} />
         </CategoriesSection>
 

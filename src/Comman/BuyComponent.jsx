@@ -39,20 +39,35 @@ function BuyComponent({ product }) {
                     <p className='text-p18 font-medium text-black '>Amount :</p>
                     <p className='text-p18 font-medium text-black '>₹{product?.price}</p>
                 </div>
-                <div className='w-full relative  py-1 text-balck  bg-green-50 grid grid-cols-2 items-center  px-10 '>
-                    <p className='text-sm font-medium text-green-800 '>Discount name :</p>
-                    <p className='text-base leading-[1.3] flex items-center gap-4 font-medium text-green-800 '>{product?.discounts?.name} 
-                        
-                        <p className='text-red-400 line-through'>{product?.discounts?.discount_persent}%</p>
-                    </p>
-                </div>
-                <div className='w-full relative  py-1 text-balck  bg-gray-100 items-center grid grid-cols-2  px-10 '>
-                    <p className='text-sm font-medium text-black '>Total :</p>
-                    <p className='text-p18 font-medium text-black '>₹{Math.floor(product?.price - (product?.price * (product?.discounts?.discount_persent / 100)))}</p>
-                </div>
+                {
+                    product?.discounts?.discount_persent && product?.discounts?.name &&
+                    <div className='w-full relative  py-1 text-balck  bg-green-50 grid grid-cols-2 items-center  px-10 '>
+                        <p className='text-sm font-medium text-green-800 '>Discount name :</p>
+                        <p className='text-base leading-[1.3] flex items-center gap-4 font-medium text-green-800 '>{product?.discounts?.name}
 
+                            <p className='text-red-400 line-through'>{product?.discounts?.discount_persent}%</p>
+                        </p>
+                    </div>
+
+                }
+                {
+                    product?.discounts?.discount_persent &&
+                    < div className='w-full relative  py-1 text-balck  bg-gray-100 items-center grid grid-cols-2  px-10 '>
+                        <p className='text-sm font-medium text-black '>Total :</p>
+                        <p className='text-p18 font-medium text-black '>₹{Math.floor(product?.price - (product?.price * (product?.discounts?.discount_persent / 100)))}</p>
+                    </div>
+                }
+
+                {
+                    !product?.discounts?.discount_persent &&
+
+                    < div className='w-full relative  py-1 text-balck  bg-gray-100 items-center grid grid-cols-2  px-10 '>
+                        <p className='text-sm font-medium text-black '>Total :</p>
+                        <p className='text-p18 font-medium text-black '>₹{product?.price}</p>
+                    </div>
+                }
             </div>
-        </section>
+        </section >
     )
 }
 

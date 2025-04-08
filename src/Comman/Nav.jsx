@@ -31,7 +31,7 @@ function Nav(props) {
   return (
 
     <nav className='  container px-5 py-2 flex items-center justify-between gap-1 text-third md:px-10 sticky bg-white top-0 z-50  xl:px-20  '>
-      <Link to={'/'} className='text-h1 font-normal  italic text-primary '>Tread & Trend</Link>
+      <Link to={'/'} className='text-h1 font-normal  italic text-primary '>MARKLINE</Link>
 
       <ul className='hidden items-center gap-3 relative md:gap-5  xl:gap-5 lg:flex '>
 

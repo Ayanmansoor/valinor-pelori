@@ -49,7 +49,7 @@ function SubscribeUs() {
             <section className='w-full relative bg-primary  '>
                 <div className='w-full relative h-auto container px-2  md:px-10   xl:px-20    flex flex-col gap-1 bg-white  py-5 '>
                     <h2 className=' text-2xl md:text-4xl font-medium text-primary italic '>Subscribe us</h2>
-                    <p className=' text-sm md:text-base font-medium text-primary  '>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, assumenda.</p>
+                    <p className=' text-sm md:text-base font-medium text-primary  line-clamp-3  '>Be the first to know about our latest arrivals, exclusive offers, and insider fashion tips. Join the Markline community and elevate your inbox with timeless elegance.</p>
                 </div>
             </section>
 

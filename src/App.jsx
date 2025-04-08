@@ -54,11 +54,11 @@ const router = createBrowserRouter(
             <Products />
           </Suspense>
         } />
-        <Route path='/trending' element={          //------> redirecting to specific product  wnat to main page
+        {/* <Route path='/trending' element={          //------> redirecting to specific product  wnat to main page
           <Suspense fallback={<><Pageloading /></>}>
             <Bestdeal />
           </Suspense>
-        } />
+        } /> */}
         <Route path='/product/:slug' element={
           <Suspense fallback={<><Pageloading /></>}>
             {/* <Order /> */}

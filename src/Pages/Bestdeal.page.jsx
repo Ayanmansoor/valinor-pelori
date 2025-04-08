@@ -36,9 +36,11 @@ function Bestdeal() {
       <CategoriesSection title={"Top Deal On Fasion "} >
         <GridRroduct data={{ categoryName: "category", name: "Top Deal On Fasion " }} />
       </CategoriesSection>
+      
       <CategoriesSection title={"title comes here"} >
         <CarouselProduct data={{ categoryName: "all", name: "title comes here" }} />
       </CategoriesSection>
+      
       <ModernCarousel apiData={data} />
 
       <Discount categoryName={"bestdeal"} />

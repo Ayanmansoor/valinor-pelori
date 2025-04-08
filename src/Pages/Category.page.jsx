@@ -19,29 +19,30 @@ import ContentLoader from 'react-content-loader'
 import { useQuery } from 'react-query'
 
 const metadata = {
-  title: "Collection - Valinor & Pelóri | Luxury Ladies' Footwear & Accessories",
-  description: "Discover the full collection of ladies' shoes, bags, and sandals at Valinor & Pelóri. Timeless elegance, sophisticated craftsmanship.",
+  title: "Collections - Markline | Shoes, Sandals & Bags for Every Step",
+  description: "Explore Markline’s full range of stylish shoes, comfortable sandals, and everyday bags. Designed for men, women, and kids with comfort and fashion in mind.",
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Collection - Valinor & Pelóri | Luxury Ladies' Footwear & Accessories",
-    description: "Explore Valinor & Pelóri’s collection of premium shoes, bags, and sandals. Find luxury pieces that define your style.",
+    title: "Collections - Markline | Shoes, Sandals & Bags for Every Step",
+    description: "Browse the complete Markline collection. Affordable, stylish, and durable footwear and accessories for all walks of life.",
     url: "/collection",
     locale: "en_us",
-    siteName: "Valinor & Pelóri",
+    siteName: "Markline",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@ValinorPelori",
-    creator: "@ValinorPelori",
-    title: "Collection - Valinor & Pelóri | Luxury Ladies' Footwear & Accessories",
-    description: "Shop the full collection at Valinor & Pelóri. Elegant shoes, handbags, and sandals for sophisticated women.",
+    site: "@MarklineFashion", // Replace with your handle if available
+    creator: "@MarklineFashion",
+    title: "Collections - Markline | Shoes, Sandals & Bags for Every Step",
+    description: "Shop the full collection at Markline. Smart, comfortable, and everyday footwear & accessories for men, women, and kids.",
   },
   canonical: "/collection",
 };
+
 
 import { getAllCollections, getCollectionBanner, getAllProducts } from '@/Supabase/SupabaseApi'
 function Category() {
@@ -109,7 +110,18 @@ function Category() {
           </ContentLoader>
         ))}
       </div>}
+      <section className='container bg-white sm:h-[350px] relative flex flex-col-reverse sm:grid py-5 grid-cols-1 sm:grid-cols-[1fr_1fr]  gap-3 px-3 sm:gap-1 md:px-10   xl:px-20'>
+        <div className='w-full relative flex flex-col justify-center items-start gap-1'>
+          <p className='text-[16px] font-medium text-primary'>Running</p>
+          <h2 className='text-p20 font-medium '>Experience True Craftsmanship</h2>
+          <p className='text-[16px] font-normal '>Explore our exclusive categories where every piece is a reflection of superior craftsmanship and timeless style. From elegant silhouettes to modern essentials, Markline offers collections designed to elevate your wardrobe with purpose and precision.</p>
+          {/* #<Link href="" className=' w-fti transition-all duration-300 relative h-auto px-4 py-1 text-white hover:bg-white border border-transparent  hover:border-primary hover:text-primary  rounded-full bg-primary mt-2 sm:mt-5'>Buy Now</Link> */}
+        </div>
+        <div className='w-full relative h-full ' >
+          <img src="https://images.unsplash.com/photo-1734942416345-ed84ae363c5e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='w-full relative sm:absolute  h-full object-cover ' />
+        </div>
 
+      </section>
 
 
       {
@@ -123,18 +135,7 @@ function Category() {
         )
       }
 
-      <section className='container bg-white sm:h-[350px] relative flex flex-col-reverse sm:grid py-5 grid-cols-1 sm:grid-cols-[1fr_1fr]  gap-3 px-3 sm:gap-1 md:px-10   xl:px-20'>
-        <div className='w-full relative flex flex-col justify-center items-start gap-1'>
-          <p className='text-[16px] font-medium text-primary'>Running</p>
-          <h2 className='text-p20 font-medium '>Lorem ipsum dolor sit amet .</h2>
-          <p className='text-[16px] font-normal '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum incidunt ipsa laborum voluptatum tempora. Ipsam ad excepturi obcaecati culpa sed!</p>
-          <Link href="" className=' w-fti transition-all duration-300 relative h-auto px-4 py-1 text-white hover:bg-white border border-transparent  hover:border-primary hover:text-primary  rounded-full bg-primary mt-2 sm:mt-5'>Buy Now</Link>
-        </div>
-        <div className='w-full relative h-full ' >
-          <img src="https://images.unsplash.com/photo-1734942416345-ed84ae363c5e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='w-full relative sm:absolute  h-full object-cover ' />
-        </div>
-
-      </section>
+ 
 
 
       {/* {

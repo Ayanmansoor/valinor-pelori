@@ -16,7 +16,7 @@ function ModernCarousel({ apiData }) {
   return (
     <section className='relative w-full h-auto bg-third  '>
       <div className='container  mx-auto reltive h-fit w-full  text-secondary pt-5 pb-10 px-2  md:px-10   xl:px-20'>
-        <h2 className='text-h1 font-medium text-white pt-5  uppercase'>Trending Products</h2>
+        <h2 className='text-h1 font-medium text-white pt-5  uppercase'>Discover Our Trending Products</h2>
         <Swiper
           slidesPerView={"auto"}
           spaceBetween={10}
