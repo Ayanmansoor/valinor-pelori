@@ -25,8 +25,10 @@ function AddToCardPopver({ children, currentProduct, colors, sizes }) {
     useEffect(() => {
         // clearCart()
 
-        const data = getCartProduct(String(currentProduct.id))
+     
 
+        const data = getCartProduct(String(currentProduct.id))
+        
         setProductcart(
             (prev) => ({
                 ...prev,
@@ -46,14 +48,8 @@ function AddToCardPopver({ children, currentProduct, colors, sizes }) {
 
     function handleStateChange(e) {
         // const data = getCartProduct(String(currentProduct.id))
-
-
         addToCart({ ...currentProduct, sizes: productcart?.sizes?.size, colors: productcart?.colors?.color, quentity: productcart?.quentitys?.quentity })
-
-
-
-
-        console.log("cart saved")
+        console.log("cart saved " , )
     }
 
     return (
@@ -66,8 +62,7 @@ function AddToCardPopver({ children, currentProduct, colors, sizes }) {
                         <div className="w-full flex flex-wrap  gap-1">
                             {
                                 colors?.map((item, index) => (
-                                    <span className={` text-center cursor-pointer border text-sm px-2 py-1  ${item.name === productcart?.colors?.color?.name ? "bg-primary text-white" : " text-primary bg-transparent"}  `} key={index} onClick={(e) => {
-                                        console.log(productcart)
+                                    <span className={` text-center cursor-pointer border text-sm px-2 py-1  ${item.name == ( productcart?.colors?.color?.name ?   productcart?.colors?.color?.name : colors[0].name ) ? "bg-primary text-white" : " text-primary bg-transparent"}  `} key={index} onClick={(e) => {
                                         setProductcart((prev) => ({
                                             ...prev,
                                             colors: {
@@ -86,7 +81,7 @@ function AddToCardPopver({ children, currentProduct, colors, sizes }) {
                         <div className="w-full grid grid-cols-5  gap-1">
                             {
                                 sizes?.map((item, index) => (
-                                    <span className={` text-center cursor-pointer    border text-sm p-1  ${item.size === productcart?.sizes?.size?.size ? "bg-primary text-white" : " text-primary bg-transparent"}  `} key={index}
+                                    <span className={` text-center cursor-pointer    border text-sm p-1  ${  item.size ===  (productcart?.sizes?.size?.size ? productcart?.sizes?.size?.size  : sizes[0].size )  ? "bg-primary text-white" : " text-primary bg-transparent"}  `} key={index}
                                         onClick={() => setProductcart((prev) => ({
                                             ...prev,
                                             sizes: {

@@ -63,7 +63,7 @@ function Returnpolicy() {
                     </p>
                     <div className="not-prose">
                         <address className="not-italic text-sm md:text-base">
-                            <p>[Your Brand Name]</p>
+                            <p>Markline Fashion</p>
                             <p>[Your Address]</p>
                             <p>[Your City, State/Province, ZIP/Postal Code]</p>
                             <p>[Your Country]</p>
@@ -84,16 +84,7 @@ function Returnpolicy() {
 
             </div>
 
-            <div className="mt-12 pt-8 border-t">
-                <div className="flex flex-col lg:flex-row justify-between items-center">
-                    <Link to="/" className="text-primary hover:underline">
-                        Return to Home
-                    </Link>
-                    <p className="text-sm text-center text-muted-foreground">
-                        © {new Date().getFullYear()} [Your Brand Name]. All rights reserved.
-                    </p>
-                </div>
-            </div>
+        
         </div>
 
     )

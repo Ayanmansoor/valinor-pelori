@@ -53,12 +53,17 @@ const getCollectionMetadata = (title, discription, slug) => ({
 
 function CategoryL2page() {
     const { slug } = useParams()
+
+    
+
     const { data: products, isLoading, isError } = useQuery({
         queryKey: ["collectiondatabaseonslug", slug],
         enabled: !!slug,
         queryFn: () => getProductBaseOnCollection(slug),
         staleTime: 2 * 60 * 1000, // 2 minutes caching
     });
+
+    console.log("slug",slug ,"products".products)
 
     const {
         data: allcollection = [],

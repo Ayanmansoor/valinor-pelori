@@ -41,12 +41,12 @@ function SecondHero({ categoryName, data }) {
                                 dynamicBullets: true,
                             }}
                             modules={[Pagination]}
-                            className="mySwiper w-full h-auto "
+                            className="mySwiper w-full h-full "
                         >
                             {
                                 firstsection.map((item, index) => (
-                                    <SwiperSlide key={index} className='w-full relative h-auto'>
-                                        <img src={` ${item.image_url} `} alt={`${item.name}`} className='h-full relative w-full object-cover ' />
+                                    <SwiperSlide key={index} className='w-full relative h-full'>
+                                        <img src={` ${item.image_url} `} alt={`${item.name}`} className='h-full relative w-full object-contain  ' />
                                     </SwiperSlide>
                                 ))
                             }

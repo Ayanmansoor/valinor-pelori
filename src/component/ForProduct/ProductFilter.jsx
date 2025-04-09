@@ -63,9 +63,9 @@ function ProductFilter({ collection }) {
                             </p>
                         </AccordionTrigger>
                         <AccordionContent className="w-full relative h-auto py-2 text-base  flex flex-wrap gap-2 font-medium px-4 ">
-                            <span className='text-base font-medium text-black border border-black px-3 py-1' >MEN</span>
-                            <span className='text-base font-medium text-black border border-black px-3 py-1' >WOMEN</span>
-                            <span className='text-base font-medium text-black border border-black px-3 py-1' >KIDS</span>
+                            <Link to={"MEN"} className='text-base font-medium text-black border border-black px-3 py-1' >MEN</Link>
+                            <Link to={"WOMEN"} className='text-base font-medium text-black border border-black px-3 py-1' >WOMEN</Link>
+                            <Link to={"KIDS"} className='text-base font-medium text-black border border-black px-3 py-1' >KIDS</Link>
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

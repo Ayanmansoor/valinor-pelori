@@ -44,19 +44,19 @@ function SubscribeUs() {
 
 
     return (
-        <section className='w-full relative border   border-white h-auto grid  grid-cols-1 sm:grid-cols-2 gap-1'>
 
-            <section className='w-full relative bg-primary  '>
-                <div className='w-full relative h-auto container px-2  md:px-10   xl:px-20    flex flex-col gap-1 bg-white  py-5 '>
+        <section className='w-full relative border bg-white container px-0     border-white h-auto grid  grid-cols-1 sm:grid-cols-2 gap-1'>
+
+            <section className='w-full relative container    '>
+                <div className='w-full relative h-auto container px-2  md:px-10   xl:px-10    flex flex-col gap-1 bg-white  py-5 '>
                     <h2 className=' text-2xl md:text-4xl font-medium text-primary italic '>Subscribe us</h2>
                     <p className=' text-sm md:text-base font-medium text-primary  line-clamp-3  '>Be the first to know about our latest arrivals, exclusive offers, and insider fashion tips. Join the Markline community and elevate your inbox with timeless elegance.</p>
                 </div>
             </section>
 
+            <section className='w-full relative bg-primary  container '>
 
-            <section className='w-full relative bg-primary  '>
-
-                <div className='bg-primary flex items-center justify-end  container px-2  md:px-10   xl:px-20  w-full h-full  py-5'>
+                <div className='bg-primary flex items-center justify-end  container px-2  md:px-10   xl:px-10  w-full h-full  py-5'>
                     <form action='' onSubmit={handleSubmit(onSubmit)} className='w-full flex item-center h-auto border  rounded-lg overflow-hidden '>
                         <input type="email" className='w-full h-auto py-2 px-3' placeholder='Enter Email' {...register('email')} />
                         <button className='text-sm font-medium px-3 text-primary bg-white cursor-pointer border '>Subscribe</button>

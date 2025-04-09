@@ -8,13 +8,20 @@ import { Link } from 'react-router-dom';
 
 function Megamanu({ children }) {
     const [slug, setslug] = useState('')
-    const { data: collections=[], isLoading: collectionloading, isError: collectionerror } = useQuery({
+    const { data: collections = [], isLoading: collectionloading, isError: collectionerror } = useQuery({
         queryKey: ["megamanucollections"],
         queryFn: getAllCollections,
         staleTime: 10 * 60 * 1000, // Data remains fresh for 10 minutes
         cacheTime: 15 * 60 * 1000, // Data stays in cache for 15 minutes
     });
-    const { data: products=[], isLoading, isError } = useQuery({
+
+    useEffect(() => {
+        const getslug = collections[0]?.slug
+        setslug(getslug)
+
+    }, [collections])
+
+    const { data: products = [], isLoading, isError } = useQuery({
         queryKey: ["megamanuslugdata", slug], // Cache per collection
         enabled: !!slug,
         queryFn: () => getProductBaseOnCollection(slug),

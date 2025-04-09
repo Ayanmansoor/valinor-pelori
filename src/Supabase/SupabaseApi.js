@@ -156,22 +156,43 @@ async function getProductBaseOnCollection(slug) {
       return null;
     }
 
-    const { data: collectionBaseData, error } = await mysupabase
-      .from("products")
-      .select(
-        `
+    if (!["MEN", "WOMEN", "KIDS"].includes(slug)) {
+      const { data: collectionBaseData, error } = await mysupabase
+        .from("products")
+        .select(
+          `
       *,
       brands(*),
       collection!inner(id, slug),
       discounts(*)
     `
-      )
-      .eq("collection.slug", slug);
+        )
+        .eq("collection.slug", slug);
 
-    if (error) {
-      throw new Error(error.message);
+      if (error) {
+        throw new Error(error.message);
+      }
+      return collectionBaseData;
     }
-    return collectionBaseData;
+
+    if (["MEN", "WOMEN", "KIDS"].includes(slug)) {
+      const { data: collectionBaseData, error } = await mysupabase
+        .from("products")
+        .select(
+          `
+        *,
+        brands(*),
+        collection(id, slug),
+        discounts(*)
+      `
+        )
+        .eq("gender", slug);
+
+      if (error) {
+        throw new Error(error.message);
+      }
+      return collectionBaseData;
+    }
   } catch (error) {
     return null;
   }

@@ -105,7 +105,7 @@ function Home() {
       <CommonSeoFile {...metadata} />
       <Hero bannerImages={HomeBanner} />
       <section className='w-full relative bg-secondary '>
-        <h2 className='text-h1 font-medium    px-2  md:px-10   xl:px-20  mx-auto pt-10 bg-secondary uppercase'>Find the Perfect Fit – For Him, Her & Kids </h2>
+        <h2 className='text-h1 font-medium   container  px-2  md:px-10   xl:px-20  mx-auto pt-10 bg-secondary uppercase'>Find the Perfect Fit – For Him, Her & Kids </h2>
       </section>
       <Filter />
 

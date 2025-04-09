@@ -36,6 +36,13 @@ function Specification({ product }) {
                         At Markline Fashion, we process and dispatch orders within 1–2 business days (excluding holidays). Delivery typically takes 3–4 business days if conditions are smooth; in case of delays, we’ll notify you promptly. Shipping is free on all orders up to ₹5000, while charges may apply beyond that based on the delivery location and method. We provide tracking details once your order is shipped, so you can stay updated. Please ensure your address is accurate to avoid delivery issues. For damaged items or returns, refer to our <Link to={'/return-policy'} className='text-primary font-semibold cursor-pointer'>Return Policy</Link> Return Policy, or reach out to us at <Link className='text-primary font-semibold cursor-pointer' to={'melto:shipping@marklinefashion.com'}></Link> shipping@marklinefashion.com for assistance.
                     </AccordionContent>
                 </AccordionItem>
+
+                <AccordionItem value="item-3">
+                    <AccordionTrigger className='text-base font-medium px-2'>Size Guide</AccordionTrigger>
+                    <AccordionContent className="w-full relative h-auto px-2 flex items-center justify-center text-sm text-primary">
+                        <img src="/size-guide.png" alt="sizes guide"  className=' max-w-[300px] md:max-w-[400px] relative h-auto' height={200} width={500}/>
+                    </AccordionContent>
+                </AccordionItem>
             </Accordion>
 
 

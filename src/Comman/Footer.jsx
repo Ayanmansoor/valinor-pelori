@@ -48,9 +48,9 @@ function Footer() {
 
             </h2>
             <ul className='flex items-start flex-col  text-base justify-start gap-2'>
-              <Link to={'collection/mens'} href="">Men</Link>
-              <Link to={'collection/womens'} href="">Women</Link>
-              <Link to={'collection/kids'} href="">Kids</Link>
+              <Link to={'collection/MEN'} href="">Men</Link>
+              <Link to={'collection/WOMEN'} href="">Women</Link>
+              <Link to={'collection/KIDS'} href="">Kids</Link>
               <Link to={'/trending'} href="">Gen z's</Link>
               <Link to={'/discount-deals'} href="">Discount Deals</Link>
             </ul>
@@ -87,7 +87,7 @@ function Footer() {
         </div>
       </section>
       <div className='w-full relative z-0 -bottom-[40px] z- h-auto  hidden  md:flex leading-[1.1] items-center op opacity-30  uppercase font-semibold text-footerfont justify-center -mt-28 bg-gradient-to-r from-transparent  to-white bg-clip-text  '>
-        Tread & Trend
+        markline fashion
       </div>
 
 
@@ -123,9 +123,9 @@ function Footer() {
                 <hr className='mt-1' />
 
                 <ul className='flex items-start flex-col mt-2  text-base justify-start gap-2'>
-                  <Link to="collection/mens">Man</Link>
-                  <Link to="collection/womens">Women</Link>
-                  <Link to='collection/kids'>kids</Link>
+                  <Link to="collection/MEN">Man</Link>
+                  <Link to="collection/WOMEN">Women</Link>
+                  <Link to='collection/KIDS'>kids</Link>
                   <Link to="trending">Trending</Link>
                   <Link to="new-arrivals">Trending</Link>
 
