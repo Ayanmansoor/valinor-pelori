@@ -103,13 +103,13 @@ function CartSheet({ children }) {
                     <SheetTitle className="font-medium text-2xl border-b pb-2">Carts</SheetTitle>
 
 
-                    <section className='w-full relative h-auto gap-2 grid grid-cols-1 extrasmall:grid-cols-2 md:flex flex-col max-h-[60vh] overflow-y-auto py-2' id="style-3">
+                    <section className='w-full relative h-auto gap-2 grid grid-cols-1 extrasmall:grid-cols-2 md:flex flex-col max-h-[50vh] overflow-y-auto py-2' id="style-3">
                         {
                             cart.map((item, index) => (
                                 <div className='w-full border p-2 rounded-lg relative h-auto flex flex-col   md:grid  md:grid-cols-[auto_1fr_auto_auto]  items-start md:items-center justify-between gap-1' key={index}>
 
                                     {
-                                        <img src={item.image_url?.map((image) => JSON.parse(image))[0]?.image_url} alt="" className=' w-full md:w-[70px] max-h-[180px] extrasmall:h-[100px] md:h-[70px] relative aspect-square rounded-md border ' />
+                                        <img src={item.image_url?.map((image) => JSON.parse(image))[0]?.image_url} alt="" className=' w-full object-contain md:w-[70px] max-h-[100px] extrasmall:h-[100px] md:h-[70px] relative aspect-square rounded-md border ' />
                                     }
 
 
